@@ -2,7 +2,7 @@ import ClientStats from "./ClientStats";
 import ClientShowcase from "./ClientShowcase";
 import clients from "../../data/clients";
 import ClientCard from "./ClientCard";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const ClientsSection = () => {
 
@@ -109,8 +109,7 @@ const ClientsSection = () => {
             to-[#3A83CC]
           "
           >
-            <Link 
-              to="/contact"
+             <Link 
               className="text-white"
             >
               Let's Work Together

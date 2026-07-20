@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const ContactCTA = () => {
   return (
     <section className="pb-16 sm:pb-20 lg:pb-24 pt-8 sm:pt-12">
@@ -44,9 +44,9 @@ const ContactCTA = () => {
               gap-2
             "
           >
-            <a href="/contact">
+            <Link to="/contact">
               Schedule A Call
-            </a>
+            </Link>
             <ArrowRight size={18} />
           </button>
         </div>

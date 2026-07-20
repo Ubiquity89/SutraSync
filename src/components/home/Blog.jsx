@@ -1,6 +1,7 @@
 import { ArrowRight, Clock, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import blogs from "../../data/blogs";
+import { Link } from "react-router-dom";
 
 export default function Blog() {
   return (
@@ -289,9 +290,10 @@ export default function Blog() {
     gap-2
   "
   >
-    <a href="/blog">
+    
+  <Link to='/blog'>
     View All Articles
-    </a>
+    </Link>
 
     <motion.span
       whileHover={{ x: 4 }}
