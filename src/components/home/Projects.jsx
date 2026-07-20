@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import projects from "../../data/projects";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   return (
@@ -283,9 +284,9 @@ export default function Projects() {
     gap-2
   "
   >
-    <a href="/portfolio">
+    <Link to="/portfolio">
       View All Projects
-    </a>
+    </Link>
 
     <motion.span
       whileHover={{ x: 4 }}

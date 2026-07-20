@@ -1,5 +1,6 @@
 import { ArrowRight, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function ServicesHero() {
   return (
@@ -108,7 +109,7 @@ export default function ServicesHero() {
                 transition-all
               "
               >
-                <a href="/contact">Get A Free Quote</a>
+                <Link to="/contact">Get A Free Quote</Link>
                 <ArrowRight size={18} />
               </button>
 
@@ -130,7 +131,7 @@ export default function ServicesHero() {
               "
               >
                 <Phone size={18} />
-                <a href="/contact">Schedule A Call</a>
+                <Link to="/contact">Schedule A Call</Link>
               </button>
 
             </div>

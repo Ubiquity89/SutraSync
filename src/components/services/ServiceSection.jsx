@@ -5,6 +5,7 @@ import {
 
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
+import { Link } from "react-router-dom";
 
 export default function ServiceSection({
   service,
@@ -243,9 +244,9 @@ export default function ServiceSection({
                   shadow-lg
                 "
               >
-                <a href="/contact">
+                <Link to="/contact">
                   Learn More
-                </a>
+                </Link>
 
                 <ArrowRight
                   size={18}
