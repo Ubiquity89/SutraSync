@@ -150,7 +150,7 @@ const ContactHero = () => {
                 <InfoCard
                   icon={<Phone size={20} />}
                   title="Phone"
-                  value="+91 98765 43210"
+                  value="+91 98376 07055"
                 />
               </motion.div>
 
@@ -158,7 +158,7 @@ const ContactHero = () => {
                 <InfoCard
                   icon={<MapPin size={20} />}
                   title="Address"
-                  value="Sector 63, Noida, Uttar Pradesh"
+                  value="Scintilla Apartment,Bengaluru"
                 />
               </motion.div>
 
@@ -208,51 +208,66 @@ const InfoCard = ({
     <motion.div
       whileHover={{
         y: -4,
-        scale: 1.02,
       }}
       transition={{
-        duration: 0.2,
+        duration: 0.25,
       }}
       className="
         bg-white
         rounded-2xl
-        p-5
-        flex
-        gap-4
-        items-center
-        shadow-sm
+        px-6
+        py-5
         border
-        border-slate-100
-        hover:shadow-lg
+        border-slate-200
+        hover:border-[#3A83CC]/30
+        hover:shadow-xl
         transition-all
       "
     >
-      <div
-        className="
-          w-12
-          h-12
-          rounded-xl
-          bg-gradient-to-r
-          from-[#234A7D]
-          to-[#3A83CC]
-          text-white
-          flex
-          items-center
-          justify-center
-          shadow-md
-        "
-      >
-        {icon}
-      </div>
+      <div className="flex items-center gap-5">
 
-      <div>
-        <p className="text-sm text-slate-400">
-          {title}
-        </p>
+        {/* Icon */}
 
-        <p className="font-medium text-[#1A3552]">
-          {value}
-        </p>
+        <div
+          className="
+            flex-shrink-0
+            text-[#3A83CC]
+          "
+        >
+          {icon}
+        </div>
+
+        {/* Content */}
+
+        <div className="min-w-0">
+
+          <p
+            className="
+              text-xs
+              font-semibold
+              uppercase
+              tracking-[3px]
+              text-slate-400
+              mb-1
+            "
+          >
+            {title}
+          </p>
+
+          <p
+            className="
+              text-lg
+              font-medium
+              text-[#1A3552]
+              leading-tight
+              break-words
+            "
+          >
+            {value}
+          </p>
+
+        </div>
+
       </div>
     </motion.div>
   );

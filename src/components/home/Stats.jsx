@@ -180,149 +180,142 @@ Our Achievements          </motion.h2>
 
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="
+    grid
+    sm:grid-cols-2
+    lg:grid-cols-5
+    gap-6
+  "
+>
+  {stats.map((item, index) => {
+    const Icon = item.icon;
+
+    return (
+      <motion.div
+        key={item.label}
+        initial={{
+          opacity: 0,
+          y: 40,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          delay: index * 0.08,
+          duration: 0.6,
+        }}
+        whileHover={{
+          y: -8,
+        }}
+        className="
+          group
           relative
-          bg-white
-          rounded-[32px]
           overflow-hidden
-          shadow-xl
+          rounded-[24px]
+          bg-white
           border
-          border-slate-100
+          border-slate-200
+          p-8
+          text-center
+          hover:border-[#3A83CC]/30
+          hover:shadow-[0_20px_50px_rgba(15,23,42,0.08)]
+          transition-all
+          duration-300
         "
-        >
-          
-          {/* Subtle Pattern Background */}
+      >
+        {/* Glow */}
 
-          <div
-            className="
+        <div
+          className="
             absolute
-            inset-0
-            opacity-40
-            bg-[radial-gradient(circle_at_1px_1px,rgba(58,131,204,0.1)_1px,transparent_0)]
-            bg-[size:24px_24px]
+            -top-10
+            -right-10
+            w-28
+            h-28
+            rounded-full
+            bg-[#3A83CC]/10
+            blur-3xl
           "
+        />
+
+        {/* Icon */}
+
+        <motion.div
+          whileHover={{
+            rotate: -10,
+            scale: 1.15,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          className="mb-6 flex justify-center"
+        >
+          <Icon
+            size={42}
+            className="
+              text-[#3A83CC]
+              group-hover:text-[#234A7D]
+              transition-colors
+            "
           />
-
-          <div className="relative grid lg:grid-cols-5">
-
-            {stats.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  whileHover={{ y: -8 }}
-                  className={`
-                    px-6
-                    py-8
-                    flex
-                    flex-col
-                    items-center
-                    justify-center
-                    gap-4
-                    text-[#1A3552]
-                    relative
-                    group
-                    ${
-                      index !== stats.length - 1
-                        ? "border-r border-slate-100"
-                        : ""
-                    }
-                  `}
-                >
-                  {/* Glass Icon Container */}
-
-                  <motion.div
-                    animate={{
-                      y: [0, -6, 0],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      delay: index * 0.2,
-                    }}
-                    className="
-                    relative
-                    w-20
-                    h-20
-                    rounded-3xl
-                    bg-gradient-to-r
-                    from-[#234A7D]
-                    to-[#3A83CC]
-                    flex
-                    items-center
-                    justify-center
-                    shadow-lg
-                  "
-                  >
-                    {/* Glow Behind Icon */}
-
-                    <div
-                      className="
-                      absolute
-                      inset-0
-                      bg-[#3A83CC]/30
-                      blur-xl
-                      rounded-full
-                    "
-                    />
-
-                    <Icon
-                      size={32}
-                      className="relative z-10 text-white"
-                    />
-                  </motion.div>
-
-                  <div className="text-center">
-
-                    <h3
-                      className="
-                      text-[56px]
-                      leading-none
-                      font-extrabold
-                      tracking-tight
-                      bg-gradient-to-r
-                      from-[#234A7D]
-                      to-[#3A83CC]
-                      bg-clip-text
-                      text-transparent
-                    "
-                    >
-                      <CountUpAnimation
-                        end={item.value}
-                        duration={2.5}
-                      />
-                      +
-                    </h3>
-
-                    <p
-                      className="
-                      text-slate-600
-                      text-sm
-                      font-medium
-                      mt-2
-                    "
-                    >
-                      {item.label}
-                    </p>
-
-                  </div>
-
-                </motion.div>
-              );
-            })}
-
-          </div>
         </motion.div>
 
+        {/* Number */}
+
+        <h3
+          className="
+            text-[42px]
+            font-bold
+            leading-none
+            text-[#1A3552]
+          "
+        >
+          <CountUpAnimation
+            end={item.value}
+          />
+          +
+        </h3>
+
+        {/* Label */}
+
+        <p
+          className="
+            mt-3
+            text-slate-500
+            font-medium
+            leading-6
+          "
+        >
+          {item.label}
+        </p>
+
+        {/* Bottom Line */}
+
+        <div
+          className="
+            absolute
+            left-0
+            bottom-0
+            h-1
+            w-0
+            bg-gradient-to-r
+            from-[#234A7D]
+            to-[#3A83CC]
+            group-hover:w-full
+            transition-all
+            duration-500
+          "
+        />
+      </motion.div>
+    );
+  })}
+</motion.div>
       </div>
 
     </section>

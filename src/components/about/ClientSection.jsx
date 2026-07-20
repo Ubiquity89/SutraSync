@@ -109,7 +109,7 @@ const ClientsSection = () => {
             to-[#3A83CC]
           "
           >
-             <Link 
+             <Link to="/contact"
               className="text-white"
             >
               Let's Work Together

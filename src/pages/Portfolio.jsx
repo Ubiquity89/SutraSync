@@ -1,35 +1,55 @@
+import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-
 import PortfolioHero from "../components/portfolio/PortfolioHero";
-import PortfolioFilters from "../components/portfolio/PortfolioFilters";
+import PortfolioFilter from "../components/portfolio/PortfolioFilter";
+import FeaturedProject from "../components/portfolio/FeaturedProject";
 import PortfolioGrid from "../components/portfolio/PortfolioGrid";
 import PortfolioCTA from "../components/portfolio/PortfolioCTA";
+import {
+  portfolioCategories,
+  featuredProject,
+  portfolioProjects,
+} from "../data/portfolioProjects";
 
 export default function Portfolio() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const gridProjects = portfolioProjects.filter(
+  (project) => project.id !== featuredProject.id
+);
+
+const filteredProjects =
+  activeCategory === "All"
+    ? gridProjects
+    : gridProjects.filter(
+        (project) => project.category === activeCategory
+      );
+
   return (
     <>
-      <Navbar />
+    <Navbar/>
+      <PortfolioHero />
 
-      <main
-        className="
-        bg-gradient-to-b
-        from-white
-        via-[#F8FAFD]
-        to-white
-        
-      "
-      >
-        <PortfolioHero />
+      <PortfolioFilter
+        categories={portfolioCategories}
+        active={activeCategory}
+        setActive={setActiveCategory}
+      />
 
-        <div className="max-w-[1400px] mx-auto px-6">
-          <PortfolioFilters />
-          <PortfolioGrid />
-          <PortfolioCTA />
-        </div>
-      </main>
+      {activeCategory === "All" && (
+      <FeaturedProject project={featuredProject} />
+      )}
 
-      <Footer />
+<PortfolioGrid
+  projects={filteredProjects}
+/>
+
+     
+      
+      <PortfolioCTA />
+      
+      <Footer/>
     </>
   );
 }

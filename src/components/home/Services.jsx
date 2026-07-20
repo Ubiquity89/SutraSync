@@ -318,37 +318,30 @@ export default function Services() {
                 "
                 />
 
-                {/* Icon Container */}
+               {/* Icon */}
 
-                <motion.div
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="
-                  relative
-                  w-16
-                  h-16
-                  rounded-2xl
-                  bg-gradient-to-r
-                  from-[#234A7D]
-                  to-[#3A83CC]
-                  flex
-                  items-center
-                  justify-center
-                  mb-6
-                  shadow-lg
-                  group-hover:shadow-xl
-                  transition-shadow
-                  duration-300
-                "
-                >
-                  <Icon
-                    size={28}
-                    className="text-white"
-                  />
-                </motion.div>
+<motion.div
+  whileHover={{
+    scale: 1.15,
+    rotate: -8,
+  }}
+  transition={{ duration: 0.3 }}
+  className="
+    relative
+    mb-6
+    inline-flex
+  "
+>
+  <Icon
+    size={44}
+    className="
+      text-[#3A83CC]
+      group-hover:text-[#234A7D]
+      transition-colors
+      duration-300
+    "
+  />
+</motion.div>
 
                 {/* Content */}
 

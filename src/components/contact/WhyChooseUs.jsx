@@ -121,100 +121,118 @@ const WhyChooseUs = () => {
             const Icon = item.icon;
 
             return (
-              <motion.div
-                key={item.title}
-                initial={{
-                  opacity: 0,
-                  y: 40,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="
-                  relative
-                  overflow-hidden
-                  bg-white/90
-                  backdrop-blur-md
-                  rounded-[28px]
-                  border
-                  border-slate-100
-                  p-8
-                  shadow-[0_10px_40px_rgba(15,23,42,0.06)]
-                "
-              >
-                {/* Card Glow */}
+            <motion.div
+  key={item.title}
+  initial={{
+    opacity: 0,
+    y: 40,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.6,
+    delay: index * 0.1,
+  }}
+  whileHover={{
+    y: -8,
+  }}
+  className="
+    relative
+    overflow-hidden
+    bg-white
+    rounded-[24px]
+    border
+    border-slate-200
+    p-8
+    hover:border-[#3A83CC]/30
+    hover:shadow-[0_20px_50px_rgba(15,23,42,0.08)]
+    transition-all
+    duration-300
+  "
+>
+  {/* Glow */}
 
-                <div
-                  className="
-                    absolute
-                    top-0
-                    right-0
-                    w-24
-                    h-24
-                    bg-[#3A83CC]/10
-                    rounded-full
-                    blur-2xl
-                  "
-                />
+  <div
+    className="
+      absolute
+      -top-8
+      -right-8
+      w-24
+      h-24
+      rounded-full
+      bg-[#3A83CC]/10
+      blur-3xl
+    "
+  />
 
-                {/* Icon */}
+  {/* Icon */}
 
-                <motion.div
-                  animate={{
-                    y: [0, -5, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: index * 0.3,
-                  }}
-                  className="
-                    w-16
-                    h-16
-                    rounded-2xl
-                    bg-gradient-to-r
-                    from-[#234A7D]
-                    to-[#3A83CC]
-                    flex
-                    items-center
-                    justify-center
-                    text-white
-                    shadow-lg
-                    mb-6
-                  "
-                >
-                  <Icon size={28} />
-                </motion.div>
+  <motion.div
+    whileHover={{
+      rotate: -10,
+      scale: 1.12,
+    }}
+    transition={{
+      duration: 0.3,
+    }}
+    className="mb-6"
+  >
+    <Icon
+      size={42}
+      className="
+        text-[#3A83CC]
+        group-hover:text-[#234A7D]
+      "
+    />
+  </motion.div>
 
-                <h4
-                  className="
-                    text-xl
-                    font-bold
-                    text-[#1A3552]
-                  "
-                >
-                  {item.title}
-                </h4>
+  {/* Title */}
 
-                <p
-                  className="
-                    mt-3
-                    text-slate-500
-                    leading-7
-                  "
-                >
-                  {item.desc}
-                </p>
-              </motion.div>
+  <h4
+    className="
+      text-[24px]
+      font-bold
+      text-[#1A3552]
+      leading-tight
+    "
+  >
+    {item.title}
+  </h4>
+
+  {/* Description */}
+
+  <p
+    className="
+      mt-4
+      text-[16px]
+      leading-7
+      text-slate-500
+    "
+  >
+    {item.desc}
+  </p>
+
+  {/* Bottom Accent */}
+
+  <div
+    className="
+      absolute
+      left-0
+      bottom-0
+      h-1
+      w-0
+      bg-gradient-to-r
+      from-[#234A7D]
+      to-[#3A83CC]
+      group-hover:w-full
+      transition-all
+      duration-500
+    "
+  />
+</motion.div>
             );
           })}
         </div>

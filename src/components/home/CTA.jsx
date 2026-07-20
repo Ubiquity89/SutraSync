@@ -1,218 +1,60 @@
-import { ArrowRight, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CTA() {
   return (
-    <section className="relative pt-20 pb-28 bg-gradient-to-b from-[#F8FAFD] via-white to-[#F0F7FF] overflow-hidden">
+    <section className="pb-18 sm:pb-20 lg:pb-24 pt-12 sm:pt-12">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-      {/* Decorative Background Elements */}
-
-      <motion.div
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.05, 0.08, 0.05],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-        }}
-        className="
-        absolute
-        top-20
-        left-[10%]
-        w-72
-        h-72
-        bg-[#3A83CC]/10
-        rounded-full
-        blur-3xl
-        pointer-events-none
-      "
-      />
-
-      <motion.div
-        animate={{
-          scale: [1, 1.15, 1],
-          opacity: [0.04, 0.07, 0.04],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-        }}
-        className="
-        absolute
-        bottom-20
-        right-[8%]
-        w-80
-        h-80
-        bg-[#234A7D]/8
-        rounded-full
-        blur-3xl
-        pointer-events-none
-      "
-      />
-
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="
-          relative
-          overflow-hidden
-          rounded-[32px]
-          bg-gradient-to-r
-          from-[#21406B]
-          via-[#2D5AA8]
-          to-[#3A83CC]
-          px-12
-          py-14
-          shadow-2xl
-        "
-        >
-
-          {/* Animated Glow */}
-
-          <motion.div
-            animate={{
-              x: [0, 20, 0],
-              y: [0, -20, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-            }}
-            className="
-            absolute
-            w-[350px]
-            h-[350px]
-            bg-white/10
-            rounded-full
-            -top-32
-            -right-32
-            blur-3xl
-          "
-          />
-
-          {/* Subtle Pattern Overlay */}
-
-          <div
-            className="
-            absolute
-            inset-0
-            opacity-10
-            bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.2)_1px,transparent_0)]
-            bg-[size:32px_32px]
-          "
-          />
-
-          {/* Floating Sparkle */}
-
-          <motion.div
-            animate={{
-              y: [0, -10, 0],
-              rotate: [0, 180],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-            }}
-            className="
-            absolute
-            top-8
-            right-12
-            text-white/15
-          "
-          >
-            <Sparkles size={40} />
-          </motion.div>
-
-          <div
-            className="
-            relative
+            rounded-[24px] sm:rounded-[32px]
+            p-6 sm:p-8 lg:p-10
+            bg-gradient-to-r
+            from-[#1A3552]
+            to-[#3A83CC]
+            text-white
             flex
-            flex-col
-            lg:flex-row
-            items-center
+            flex-col sm:flex-row
             justify-between
-            gap-8
+            items-center
+            gap-6
           "
-          >
+        >
+          <div>
+            <h3 className="text-2xl sm:text-3xl font-bold">
+              
+Ready to Build Something Amazing?
+            </h3>
 
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              <h2
-                className="
-                text-white
-                text-[38px]
-                font-bold
-                leading-tight
-              "
-              >
-                Ready to Build Something Amazing?
-              </h2>
+            <p className="mt-2 text-white/80">
+Let's turn your idea into a powerful digital product.
 
-              <p
-                className="
-                mt-3
-                text-white/80
-                text-lg
-                leading-relaxed
-              "
-              >
-                Let's turn your idea into a powerful digital product.
-              </p>
 
-            </motion.div>
 
-            <motion.button
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(255,255,255,0.3)",
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="
-              h-14
-              px-8
+            </p>
+          </div>
+
+          <button
+            className="
               bg-white
-              text-[#21406B]
+              text-[#1A3552]
+              px-5 sm:px-6
+              h-12 sm:h-14
               rounded-xl
-              font-semibold
+              font-medium
               flex
               items-center
               gap-2
-              transition-all
-              shadow-xl
             "
-            >
-              <Link to="/contact">
-                Get In Touch
-              </Link>
-              
-
-              <motion.span
-                whileHover={{ x: 4 }}
-                transition={{ duration: 0.2 }}
-              >
-                <ArrowRight size={18} />
-              </motion.span>
-            </motion.button>
-
-          </div>
-
-        </motion.div>
+          >
+            <Link to="/contact">
+              Get in touch
+            </Link>
+            <ArrowRight size={18} />
+          </button>
+        </div>
 
       </div>
-
     </section>
   );
 }

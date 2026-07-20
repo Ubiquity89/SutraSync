@@ -1,57 +1,77 @@
-const PortfolioHero = () => {
+import { motion } from "framer-motion";
+
+export default function PortfolioHero() {
   return (
-    <section className="pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 text-center">
-      <div className="max-w-[900px] mx-auto px-4 sm:px-6">
+    <section className="relative overflow-hidden py-20 lg:py-16 bg-white">
 
-        <div
-          className="
-          inline-flex
-          items-center
-          gap-2
-          px-5
-          py-2
-          rounded-full
-          bg-white
-          border
-          border-slate-200
-          shadow-sm
-        "
-        >
-          <span className="w-2 h-2 bg-blue-500 rounded-full" />
-          <span className="text-[#2563EB] font-semibold text-sm">
-            OUR WORK
-          </span>
-        </div>
+     <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+  <div
+    className="
+      h-full
+      w-full
+      bg-[radial-gradient(circle,#3A83CC_1px,transparent_1px)]
+      bg-[size:28px_28px]
+    "
+  />
+</div>
 
-        <h1
-          className="
-          mt-8
-          text-[42px]
-          sm:text-[56px]
-          lg:text-[70px]
-          leading-none
-          font-bold
-          text-[#031B4E]
-        "
-        >
-          Our Portfolio
-        </h1>
+      <div className="relative max-w-[1200px] mx-auto px-6">
 
-        <p
-          className="
-          mt-6
-          text-slate-500
-          text-xl
-          leading-9
-        "
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
         >
-          We build digital products, platforms and
-          experiences that help businesses grow and scale.
-        </p>
+
+          <div
+            className="
+              inline-flex
+              items-center
+              px-5
+              py-2
+              rounded-full
+              bg-[#EEF5FF]
+              text-[#3A83CC]
+              text-xs
+              font-semibold
+              tracking-[3px]
+              uppercase
+            "
+          >
+            Our Work
+          </div>
+
+          <h1
+            className="
+              mt-8
+              text-5xl
+              lg:text-6xl
+              font-bold
+              text-[#16345B]
+            "
+          >
+            Portfolio
+          </h1>
+
+          <p
+            className="
+              mt-6
+              max-w-[680px]
+              mx-auto
+              text-slate-500
+              leading-8
+            "
+          >
+            A collection of software products, AI platforms,
+            enterprise solutions and digital experiences we've
+            designed and developed for businesses worldwide.
+          </p>
+
+        </motion.div>
 
       </div>
     </section>
   );
-};
-
-export default PortfolioHero;
+}

@@ -1,32 +1,24 @@
-import { portfolioProjects } from "../../data/portfolioProjects";
-import FeaturedProject from "./FeaturedProject";
 import PortfolioCard from "./PortfolioCard";
 
-const PortfolioGrid = () => {
-  const featured = portfolioProjects.find(
-    (item) => item.featured
-  );
-
-  const projects = portfolioProjects.filter(
-    (item) => !item.featured
-  );
-
+export default function PortfolioGrid({ projects }) {
   return (
-    <>
-      <FeaturedProject project={featured} />
+    <section className="pb-24">
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-[1200px] mx-auto px-6">
 
-        {projects.map((project) => (
-          <PortfolioCard
-            key={project.id}
-            project={project}
-          />
-        ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {projects.map((project) => (
+            <PortfolioCard
+              key={project.id}
+              project={project}
+            />
+          ))}
+
+        </div>
 
       </div>
-    </>
-  );
-};
 
-export default PortfolioGrid;
+    </section>
+  );
+}

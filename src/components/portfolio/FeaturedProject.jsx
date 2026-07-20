@@ -1,85 +1,83 @@
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
-const FeaturedProject = ({ project }) => {
+export default function FeaturedProject({ project }) {
   return (
-    <div
-      className="
-      relative
-      overflow-hidden
-      rounded-[32px]
-      bg-[#031B4E]
-      text-white
-      grid
-      lg:grid-cols-2
-      mb-10
-      max-w-1200px
-    
-    "
-    >
-      <div className="p-12 max-w-1000">
+    <section className="pb-14 min-h-[400px] pt-14">
+      <div className="max-w-[1200px] mx-auto px-6 ">
 
-        <p className="text-blue-400">
-          FEATURED PROJECT
-        </p>
-
-        <h2
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: .7 }}
           className="
-          mt-6
-          text-6xl
-          font-bold
+          overflow-hidden
+          rounded-[32px]
+          bg-[#0F2B59]
+          grid
+          lg:grid-cols-2
+          shadow-[0_30px_80px_rgba(15,23,42,.12)]
         "
         >
-          {project.title}
-        </h2>
 
-        <span
-          className="
-          inline-block
-          mt-4
-          px-4
-          py-2
-          rounded-full
-          bg-blue-600
-        "
-        >
-          {project.category}
-        </span>
+          {/* LEFT */}
 
-        <p className="mt-6 text-slate-300 leading-8">
-          {project.description}
-        </p>
+          <div className="p-12 flex flex-col justify-center">
 
-        <div className="flex gap-4 mt-8">
-          {project.technologies.map((tech) => (
-            <span key={tech}>{tech}</span>
-          ))}
-        </div>
+            <span className="text-[#63A6FF] uppercase tracking-[3px] text-xs font-semibold">
+              Featured Project
+            </span>
 
-        <button
-          className="
-          mt-10
-          flex
-          items-center
-          gap-3
-          font-semibold
-        "
-        >
-          View Case Study
-          <ArrowRight />
-        </button>
+            <h2 className="mt-6 text-5xl font-bold text-white leading-tight">
+              {project.title}
+            </h2>
+
+           
+
+            <div className="flex flex-wrap gap-3 mt-8">
+              {project.technologies.map((item) => (
+                <span
+                  key={item}
+                  className="
+                  px-4
+                  py-2
+                  rounded-full
+                  bg-white/10
+                  text-white
+                  text-sm
+                "
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+           
+
+          </div>
+
+          {/* IMAGE */}
+
+          <div className="relative overflow-hidden">
+
+            <motion.img
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: .5 }}
+              src={project.image}
+              alt={project.title}
+              className="
+              w-full
+              h-[330px]
+              object-cover
+            "
+            />
+
+          </div>
+
+        </motion.div>
+
       </div>
-
-      <img
-        src={project.image}
-        alt=""
-        className="
-          w-1200
-          h-full
-          object-cover
-        "
-      />
-    </div>
+    </section>
   );
-};
-
-export default FeaturedProject;
+}

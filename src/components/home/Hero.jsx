@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white min-h-[92vh] flex items-center">
+    <section className="relative overflow-hidden bg-white min-h-[80px] flex items-center">
 
       {/* Background */}
 

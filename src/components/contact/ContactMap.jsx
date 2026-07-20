@@ -78,113 +78,139 @@ const ContactMap = () => {
 
         {/* Map Container */}
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.8,
-          }}
+       <motion.div
+  initial={{
+    opacity: 0,
+    y: 50,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+  }}
+  className="
+    relative
+    overflow-hidden
+    rounded-[30px]
+    border
+    border-slate-200
+    shadow-[0_20px_60px_rgba(15,23,42,0.08)]
+  "
+>
+  {/* MAP */}
+
+  <iframe
+    title="SutraSync Office"
+    src="https://www.google.com/maps?q=Scintilla+Apartment,+Yelahanka,+Bengaluru&output=embed"
+    className="w-full h-[360px] md:h-[480px]"
+    loading="lazy"
+  />
+
+  {/* Floating Card */}
+
+  <motion.div
+    animate={{
+      y: [0, -6, 0],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      absolute
+      left-6
+      bottom-6
+      bg-white/90
+      backdrop-blur-xl
+      rounded-2xl
+      px-6
+      py-5
+      shadow-2xl
+      border
+      border-white
+      max-w-[340px]
+    "
+  >
+    <div className="flex gap-4">
+
+      {/* Icon */}
+
+      <div className="text-[#3A83CC] mt-1">
+        <MapPin size={28} />
+      </div>
+
+      {/* Content */}
+
+      <div>
+
+        <p
           className="
-            relative
-            overflow-hidden
-            rounded-[32px]
-            border
-            border-slate-100
-            shadow-[0_20px_60px_rgba(15,23,42,0.08)]
+            text-xs
+            uppercase
+            tracking-[3px]
+            font-semibold
+            text-slate-400
           "
         >
-          <iframe
-            title="location"
-            src="https://www.google.com/maps/place/Sutrasync+Technologies-+It+Solutions+and+Software+Development/@13.1085825,77.5765665,17z/data=!4m10!1m2!2m1!1sSutrasync+Technologies+Bengaluru!3m6!1s0x3bae190c0a4da225:0xebfc2fee9876b882!8m2!3d13.1085439!4d77.5793709!15sCiBTdXRyYXN5bmMgVGVjaG5vbG9naWVzIEJlbmdhbHVydZIBFGluZm9ybWF0aW9uX3NlcnZpY2Vz4AEA!16s%2Fg%2F11mzr35wyw?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
-            className="w-full h-[350px] sm:h-[400px] md:h-[500px]"
-          />
+          Headquarters
+        </p>
 
-          {/* Floating Office Card */}
+        <h4
+          className="
+            mt-1
+            text-lg
+            font-bold
+            text-[#1A3552]
+          "
+        >
+          SutraSync Technologies
+        </h4>
 
-          <motion.div
-            animate={{
-              y: [0, -8, 0],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="
-              absolute
-              left-4 sm:left-8
-              bottom-4 sm:bottom-8
-              bg-white/95
-              backdrop-blur-md
-              rounded-2xl sm:rounded-3xl
-              p-4 sm:p-6
-              shadow-xl
-              border
-              border-slate-100
-              max-w-[280px] sm:max-w-[320px]
-            "
-          >
-            <div className="flex items-start gap-4">
+        <p
+          className="
+            mt-2
+            text-sm
+            leading-6
+            text-slate-500
+          "
+        >
+          Scintilla Apartment, 23,
+          <br />
+          1st Main Road,
+          <br />
+          Yelahanka New Town,
+          <br />
+          Bengaluru, Karnataka
+        </p>
 
-              <div
-                className="
-                  w-12
-                  h-12
-                  rounded-xl
-                  bg-gradient-to-r
-                  from-[#234A7D]
-                  to-[#3A83CC]
-                  text-white
-                  flex
-                  items-center
-                  justify-center
-                  shrink-0
-                "
-              >
-                <MapPin size={20} />
-              </div>
+        <a
+          href="https://maps.google.com/?q=Scintilla+Apartment,+Yelahanka,+Bengaluru"
+          target="_blank"
+          rel="noreferrer"
+          className="
+            inline-flex
+            items-center
+            gap-2
+            mt-4
+            text-[#3A83CC]
+            font-semibold
+            hover:gap-3
+            transition-all
+          "
+        >
+          <Navigation size={16} />
+          Get Directions →
+        </a>
 
-              <div>
-                <h4
-                  className="
-                    text-[#1A3552]
-                    font-bold
-                  "
-                >
-                  SutraSync Office
-                </h4>
+      </div>
 
-                <p className="text-sm text-slate-500 mt-1">
-                  Scintilla Apartment, 23, 1st Main Rd, 4th Phase, Yelahanka New Town, Bengaluru, India
-                </p>
-
-                <button
-                  className="
-                    mt-4
-                    inline-flex
-                    items-center
-                    gap-2
-                    text-[#3A83CC]
-                    font-medium
-                    text-sm
-                  "
-                >
-                  <Navigation size={16} />
-                  Get Directions
-                </button>
-              </div>
-
-            </div>
-          </motion.div>
-
-        </motion.div>
+    </div>
+  </motion.div>
+</motion.div>
 
       </div>
     </section>
