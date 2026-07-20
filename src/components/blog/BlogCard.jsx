@@ -33,22 +33,7 @@ const BlogCard = ({ post }) => {
           "
         />
 
-        <div
-          className="
-            absolute
-            top-4
-            left-4
-            px-3
-            py-1
-            rounded-full
-            bg-[#2563EB]
-            text-white
-            text-xs
-            font-medium
-          "
-        >
-          {post.category}
-        </div>
+        
 
         <div
           className="

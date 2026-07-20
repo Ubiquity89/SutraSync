@@ -110,7 +110,7 @@ export const portfolioProjects = [
 
     category: "AI",
 
-    image: "/project8.jpeg",
+    image: "/project8.png",
 
     description:
       "AI powered lead qualification and automated outreach workflows.",

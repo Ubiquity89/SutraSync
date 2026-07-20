@@ -8,9 +8,45 @@ export const blogPosts = [
     date: 'January 15, 2026',
     author: 'Arjun Sharma',
     category: 'Artificial Intelligence',
-    image: '/blog1.jpg',
+    image: '/blog4.png',
     readTime: '8 min read',
     tags: ['AI', 'Machine Learning', 'Development', 'Automation']
+  },
+  {
+    id: 2,
+    slug: 'cybersecurity-best-practices-2026',
+    title: 'Cybersecurity Best Practices for 2026: Protect Your Business',
+    excerpt: 'Essential security measures every business needs: from zero-trust architecture to AI-powered threat detection. Learn how to protect your data, infrastructure, and customers in an evolving threat landscape.',
+    date: 'December 20, 2025',
+    author: 'David Wilson',
+    category: 'Cybersecurity',
+    image: '/blog13.png',
+    readTime: '9 min read',
+    tags: ['Security', 'Cybersecurity', 'Data Protection', 'Best Practices']
+  },
+  {
+    id: 7,
+    slug: 'mobile-first-design-2026',
+    title: 'Mobile-First Design: Creating Exceptional Mobile Experiences',
+    excerpt: 'Learn why mobile-first design is crucial in 2026 and how to create responsive, fast, and engaging mobile experiences. Includes practical tips for touch interfaces and mobile performance.',
+    date: 'December 10, 2025',
+    author: 'Priya Patel',
+    category: 'Mobile Development',
+    image: '/blog10.png',
+    readTime: '7 min read',
+    tags: ['Mobile', 'Responsive Design', 'UX', 'Performance']
+  },
+  {
+    id: 4,
+    slug: 'building-scalable-cloud-architectures',
+    title: 'Building Scalable Cloud Architectures: A Complete Guide',
+    excerpt: 'A comprehensive guide to designing cloud infrastructures that scale with your business. Learn about microservices, containerization, serverless computing, and cloud-native best practices.',
+    date: 'December 15, 2025',
+    author: 'Lisa Anderson',
+    category: 'Cloud Computing',
+    image: '/blog9.png',
+    readTime: '12 min read',
+    tags: ['Cloud', 'AWS', 'Azure', 'Architecture']
   },
   {
     id: 2,
@@ -20,7 +56,7 @@ export const blogPosts = [
     date: 'January 10, 2026',
     author: 'Priya Patel',
     category: 'Web Design',
-    image: '/blog3.png',
+    image: '/blog5.png',
     readTime: '6 min read',
     tags: ['Design', 'UX', 'UI', 'Minimalism']
   },
@@ -32,7 +68,7 @@ export const blogPosts = [
     date: 'January 05, 2026',
     author: 'Vikram Singh',
     category: 'Web Development',
-    image: '/blog1.png',
+    image: '/blog7.png',
     readTime: '10 min read',
     tags: ['React', 'Performance', 'JavaScript', 'Optimization']
   },
@@ -44,45 +80,9 @@ export const blogPosts = [
     date: 'December 28, 2025',
     author: 'Ananya Gupta',
     category: 'Industry Trends',
-    image: '/digital.png',
+    image: '/blog6.png',
     readTime: '7 min read',
     tags: ['No-Code', 'Low-Code', 'Innovation', 'Trends']
-  },
-  {
-    id: 5,
-    slug: 'cybersecurity-best-practices-2026',
-    title: 'Cybersecurity Best Practices for 2026: Protect Your Business',
-    excerpt: 'Essential security measures every business needs: from zero-trust architecture to AI-powered threat detection. Learn how to protect your data, infrastructure, and customers in an evolving threat landscape.',
-    date: 'December 20, 2025',
-    author: 'David Wilson',
-    category: 'Cybersecurity',
-    image: '/blog1.jpg',
-    readTime: '9 min read',
-    tags: ['Security', 'Cybersecurity', 'Data Protection', 'Best Practices']
-  },
-  {
-    id: 6,
-    slug: 'building-scalable-cloud-architectures',
-    title: 'Building Scalable Cloud Architectures: A Complete Guide',
-    excerpt: 'A comprehensive guide to designing cloud infrastructures that scale with your business. Learn about microservices, containerization, serverless computing, and cloud-native best practices.',
-    date: 'December 15, 2025',
-    author: 'Lisa Anderson',
-    category: 'Cloud Computing',
-    image: '/blog1.png',
-    readTime: '12 min read',
-    tags: ['Cloud', 'AWS', 'Azure', 'Architecture']
-  },
-  {
-    id: 7,
-    slug: 'mobile-first-design-2026',
-    title: 'Mobile-First Design: Creating Exceptional Mobile Experiences',
-    excerpt: 'Learn why mobile-first design is crucial in 2026 and how to create responsive, fast, and engaging mobile experiences. Includes practical tips for touch interfaces and mobile performance.',
-    date: 'December 10, 2025',
-    author: 'Priya Patel',
-    category: 'Mobile Development',
-    image: '/blog1.jpg',
-    readTime: '7 min read',
-    tags: ['Mobile', 'Responsive Design', 'UX', 'Performance']
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ export const blogPosts = [
     date: 'December 5, 2025',
     author: 'Arjun Sharma',
     category: 'Digital Marketing',
-    image: '/blog1.png',
+    image: '/blog12.png',
     readTime: '11 min read',
     tags: ['SEO', 'Marketing', 'Content', 'Google']
   },
@@ -104,7 +104,7 @@ export const blogPosts = [
     date: 'November 28, 2025',
     author: 'Vikram Singh',
     category: 'Web Development',
-    image: '/blog1.png',
+    image: '/blog11.png',
     readTime: '8 min read',
     tags: ['PWA', 'Web Development', 'Mobile', 'JavaScript']
   }
