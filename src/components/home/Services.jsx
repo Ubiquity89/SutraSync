@@ -8,6 +8,7 @@ import {
   Brain,
   Briefcase,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -418,9 +419,12 @@ export default function Services() {
           "
           
           >
-            <a   href="/services">
+            <Link
+              to="/services"
+              className="text-white"
+            >
               View All Services
-            </a>
+            </Link>
 
             <motion.span
               whileHover={{ x: 4 }}
