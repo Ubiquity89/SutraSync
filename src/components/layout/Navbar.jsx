@@ -119,7 +119,7 @@ const navLinkClass = ({ isActive }) =>
               to="/contact"
               className="flex items-center gap-2"
             >
-              Let's Talk
+              Book a demo
               <ArrowRight size={16} />
             </Link>
           </button>

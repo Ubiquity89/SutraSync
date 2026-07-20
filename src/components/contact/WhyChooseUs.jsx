@@ -20,8 +20,8 @@ const items = [
   },
   {
     icon: Award,
-    title: "Award Winning",
-    desc: "Recognized for innovation, quality and client satisfaction.",
+    title: "99.9% Uptime",
+    desc: " Provides high uptime and reliabity",
   },
   {
     icon: Headphones,
