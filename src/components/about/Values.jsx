@@ -10,7 +10,7 @@ import {
 
 export default function ValuesSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-white overflow-hidden">
+    <section className=" hidden md:block py-16 sm:py-20 lg:py-32 bg-white overflow-hidden">
 
       <div className="max-w-[1260px] mx-auto px-4 sm:px-6">
 

@@ -4,21 +4,23 @@ const blogs = [
     category: "Technology",
     date: "May 15, 2024",
     readTime: "5 min read",
-    image: "/blog1.jpg",
+    image: "/blog4.png",
   },
+  
   {
-    title: "How Digital Transformation Drives Business Growth",
-    category: "Business",
+    title: "Building Scalable Cloud Architectures: A Complete Guide",
+    category: "Cloud Computing",
     date: "May 10, 2024",
     readTime: "6 min read",
-    image: "/digital.png",
+    image: "/blog9.png",
   },
+   
   {
-    title: "Best Practices for Scalable Web Applications",
-    category: "Development",
+    title: "Optimizing React Applications: Performance Best Practices",
+    category: "Web Design",
     date: "May 5, 2024",
     readTime: "4 min read",
-    image: "/blog3.png",
+    image: "/blog7.png",
   },
 ];
 

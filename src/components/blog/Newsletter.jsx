@@ -18,7 +18,7 @@ const NewsletterSection = () => {
 
   return (
     <section className="py-2 pb-20">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div
           className="
             relative
@@ -28,7 +28,7 @@ const NewsletterSection = () => {
             shadow-[0_20px_60px_rgba(2,27,77,0.18)]
           "
         >
-          {/* background pattern */}
+          {/* Background Pattern */}
           <div
             className="
               absolute
@@ -39,17 +39,22 @@ const NewsletterSection = () => {
             "
           />
 
-          <div className="relative p-8 lg:p-10">
-            <div className="grid lg:grid-cols-[1fr_520px] gap-8 items-center">
+          <div className="relative px-6 py-7 lg:p-10">
+
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_520px] gap-4 lg:gap-8 items-center">
+
               {/* LEFT */}
-              <div className="flex items-center gap-6">
+              <div className="flex flex-col lg:flex-row items-center lg:items-center text-center lg:text-left gap-4 lg:gap-6">
+
+                {/* Hidden on Mobile */}
                 <div
                   className="
+                    hidden
+                    md:flex
                     w-16
                     h-16
                     rounded-full
                     bg-white
-                    flex
                     items-center
                     justify-center
                     shadow-lg
@@ -64,18 +69,24 @@ const NewsletterSection = () => {
                 </div>
 
                 <div>
+
                   <h3
                     className="
                       text-white
-                      text-3xl
+                      text-[28px]
+                      lg:text-3xl
                       font-bold
+                      leading-tight
                     "
                   >
                     Stay Ahead with Tech Insights
                   </h3>
 
+                  {/* Desktop Only */}
                   <p
                     className="
+                      hidden
+                      md:block
                       mt-2
                       text-white/75
                       text-lg
@@ -84,62 +95,74 @@ const NewsletterSection = () => {
                     Subscribe to our newsletter and get latest
                     articles, trends, insights delivered to your inbox.
                   </p>
+
                 </div>
+
               </div>
 
               {/* RIGHT */}
               <div>
+
                 {!subscribed ? (
-                  <>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        value={email}
-                        onChange={(e) =>
-                          setEmail(e.target.value)
-                        }
-                        className="
-                          flex-1
-                          h-16
-                          rounded-xl
-                          px-5
-                          text-slate-700
-                          outline-none
-                          bg-white
-                        "
-                      />
+                 <>
+  <div className="flex flex-col sm:flex-row gap-4 w-full">
 
-                      <button
-                        onClick={handleSubscribe}
-                        className="
-                          h-16
-                          px-8
-                          rounded-xl
-                          bg-[#3A83CC]
-                          text-white
-                          font-semibold
-                          flex
-                          items-center
-                          justify-center
-                          gap-2
-                          hover:bg-[#3A83FF]
-                          transition-all
-                        "
-                      >
-                        Subscribe Now
-                        <ArrowRight size={18} />
-                      </button>
-                    </div>
+    <input
+      type="email"
+      placeholder="Enter your email address"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      className="
+        w-full
+        sm:flex-1
+        h-[56px]
+        lg:h-16
+        rounded-xl
+        px-5
+        bg-white
+        text-slate-700
+        placeholder:text-slate-400
+        placeholder:text-[15px]
+        text-[15px]
+        outline-none
+      "
+    />
 
-                    <p className="text-white/60 text-sm mt-3">
-                      No spam, unsubscribe at any time.
-                    </p>
-                  </>
+    <button
+      onClick={handleSubscribe}
+      className="
+        w-full
+        sm:w-auto
+        sm:px-8
+        h-[56px]
+        lg:h-16
+        rounded-xl
+        bg-[#3A83CC]
+        text-white
+        font-semibold
+        flex
+        items-center
+        justify-center
+        gap-2
+        transition-all
+        hover:bg-[#3A83FF]
+      "
+    >
+      Subscribe Now
+      <ArrowRight size={18} />
+    </button>
+
+  </div>
+
+  <p className="mt-3 text-sm text-white/60 text-center lg:text-left">
+    No spam, unsubscribe at any time.
+  </p>
+</>
                 ) : (
                   <div
                     className="
-                      h-16
+                      h-14
+                      lg:h-16
                       rounded-xl
                       bg-white
                       flex
@@ -154,8 +177,11 @@ const NewsletterSection = () => {
                     Successfully Subscribed
                   </div>
                 )}
+
               </div>
+
             </div>
+
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import process from "../../data/process";
 
 export default function Process() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-[#F8FAFD] via-white to-[#F0F7FF] overflow-hidden">
+    <section className="hidden md:block relative py-24 bg-gradient-to-b from-[#F8FAFD] via-white to-[#F0F7FF] overflow-hidden">
 
       {/* Decorative Background Elements */}
 

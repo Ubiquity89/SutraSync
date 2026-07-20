@@ -6,7 +6,7 @@ export default function PortfolioFilter({
   setActive,
 }) {
   return (
-    <section className="pb-14">
+    <section className="pb-10">
 
       <div className="max-w-[1200px] mx-auto px-6">
 

@@ -150,6 +150,7 @@ export default function ServicesHero() {
 
             <div
               className="
+              hidden md:block
               absolute
               -z-10
               w-[600px]
@@ -168,6 +169,7 @@ export default function ServicesHero() {
 
             <div
               className="
+              hidden md:block
               absolute
               left-0
               bottom-20
@@ -197,6 +199,7 @@ export default function ServicesHero() {
               src="/servicehero.png"
               alt="Dashboard"
               className="
+              hidden md:block
               w-full
               relative
               z-10

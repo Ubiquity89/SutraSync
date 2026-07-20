@@ -57,13 +57,14 @@ export default function ServiceSection({
               transition={{
                 duration: 0.8,
               }}
-              className="relative"
+              className="relative hidden md:block"
             >
 
              <div className=" flex items-center justify-center min-h-[400px] sm:min-h-[550px]">
                {/* BIG BLOB */}
  <div
                 className="
+
                 absolute
                 z-0
                 w-[420px]

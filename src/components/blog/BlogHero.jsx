@@ -6,7 +6,6 @@ import BlogGrid from "./BlogGrid";
 import { Link } from "react-router-dom";
 
 const BlogHero = () => {
-  
   return (
     <>
       {/* HERO */}
@@ -36,24 +35,30 @@ const BlogHero = () => {
           />
         </div>
 
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-32 sm:pb-40 relative z-10">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-16 sm:pb-40 relative z-10">
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
 
             {/* LEFT */}
             <div>
 
+              {/* Breadcrumb */}
               <div
                 className="
                   inline-flex
                   items-center
                   gap-2
-                  px-4
-                  py-1.5
+                  px-3
+                  sm:px-4
+                  py-1
+                  sm:py-1.5
                   rounded-full
                   bg-white/10
                   text-blue-300
-                  text-sm
-                  mb-8
+                  text-xs
+                  sm:text-sm
+                  mb-5
+                  sm:mb-8
                 "
               >
                 Home
@@ -61,11 +66,15 @@ const BlogHero = () => {
                 Blog
               </div>
 
+              {/* Heading */}
               <h1
                 className="
-                  text-[42px] sm:text-[52px] lg:text-[58px] md:text-[64px]
+                  text-[34px]
+                  sm:text-[52px]
+                  md:text-[64px]
+                  lg:text-[58px]
                   font-bold
-                  leading-[0.95]
+                  leading-[1]
                   text-white
                 "
               >
@@ -76,26 +85,31 @@ const BlogHero = () => {
                 </span>
               </h1>
 
+              {/* Description */}
               <p
                 className="
-                mt-6 sm:mt-8
-                text-white/80
-                text-base sm:text-lg
-                leading-relaxed
-                max-w-xl
+                  mt-5
+                  sm:mt-8
+                  text-white/80
+                  text-base
+                  sm:text-lg
+                  leading-8
+                  max-w-xl
                 "
               >
-                Stay updated with the latest trends, expert insights,
-                tutorials and industry best practices in technology,
-                design, AI and digital transformation.
+                Stay updated with the latest trends, AI insights,
+                practical tutorials and digital transformation
+                strategies.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 sm:mt-10">
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-10">
 
                 <button
                   className="
                     h-12
-                    px-6 sm:px-8
+                    px-6
+                    sm:px-8
                     rounded-xl
                     bg-gradient-to-r
                     from-[#2D4F7D]
@@ -104,6 +118,7 @@ const BlogHero = () => {
                     font-medium
                     flex
                     items-center
+                    justify-center
                     gap-2
                     hover:scale-105
                     transition-all
@@ -112,29 +127,37 @@ const BlogHero = () => {
                   <Link to="/blog">
                     Explore Articles
                   </Link>
-                    <ArrowRight size={18} />
+
+                  <ArrowRight size={18} />
                 </button>
 
+                {/* Hidden on Mobile */}
                 <button
                   className="
+                    hidden
+                    sm:flex
                     h-12
-                    px-6 sm:px-8
+                    px-6
+                    sm:px-8
                     rounded-xl
                     bg-white
                     text-[#031B4E]
                     font-medium
                     border
                     border-white
+                    items-center
+                    justify-center
                   "
                 >
                   Subscribe
                 </button>
 
               </div>
+
             </div>
 
             {/* RIGHT */}
-            <div className="relative flex justify-end">
+            <div className="hidden md:block relative flex justify-end">
 
               <GlobeGraphic />
 
@@ -162,6 +185,7 @@ const BlogHero = () => {
                 <h3 className="text-5xl font-bold text-[#031B4E]">
                   250+
                 </h3>
+
               </motion.div>
 
               <motion.div
@@ -188,15 +212,18 @@ const BlogHero = () => {
                 <h3 className="text-5xl font-bold text-[#031B4E]">
                   10K+
                 </h3>
+
               </motion.div>
 
             </div>
-          </div>
-        </div>
 
-        {/* FLOATING STATS */}
+          </div>
+
+        </div>
+                {/* FLOATING STATS */}
         <div
           className="
+            hidden md:block
             absolute
             left-0
             right-0
@@ -205,7 +232,7 @@ const BlogHero = () => {
             z-30
           "
         >
-          <div className="max-w-[1200px] mx-auto px-8 ">
+          <div className="max-w-[1200px] mx-auto px-8">
 
             <div
               className="
@@ -219,7 +246,7 @@ const BlogHero = () => {
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
-                {/* CARD 1 */}
+                {/* Articles */}
                 <div className="py-8 text-center">
 
                   <div
@@ -249,7 +276,7 @@ const BlogHero = () => {
 
                 </div>
 
-                {/* CARD 2 */}
+                {/* Audience */}
                 <div className="py-8 text-center border-x border-slate-100">
 
                   <div
@@ -270,7 +297,8 @@ const BlogHero = () => {
                   </div>
 
                   <h3 className="mt-4 text-5xl font-bold text-[#031B4E]">
-                    <CountUp end={10} duration={2.5} />K+
+                    <CountUp end={10} duration={2.5} />
+                    K+
                   </h3>
 
                   <p className="mt-2 text-slate-500">
@@ -279,7 +307,7 @@ const BlogHero = () => {
 
                 </div>
 
-                {/* CARD 3 */}
+                {/* Content */}
                 <div className="py-8 text-center">
 
                   <div
@@ -316,24 +344,44 @@ const BlogHero = () => {
         </div>
 
       </section>
- {/* NEXT SECTION */}
-      <section className="bg-white pt-40 pb-24">
+            {/* NEXT SECTION */}
+      <section className="bg-white pt-8 sm:pt-20 lg:pt-40 pb-24">
 
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
 
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
 
-            <p className="text-blue-500 uppercase tracking-[4px] text-sm font-semibold">
+            <p className="text-blue-500 uppercase tracking-[4px] text-xs sm:text-sm font-semibold">
               Latest Articles
             </p>
 
-            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#031B4E]">
+            <h2
+              className="
+                mt-3
+                sm:mt-4
+                text-2xl
+                sm:text-4xl
+                lg:text-5xl
+                font-bold
+                text-[#031B4E]
+              "
+            >
               Explore Our Insights
             </h2>
 
-            <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-              Expert articles covering technology, AI, web
-              development and digital transformation.
+            <p
+              className="
+                mt-4
+                text-sm
+                sm:text-base
+                text-slate-500
+                max-w-2xl
+                mx-auto
+                leading-7
+              "
+            >
+              Expert articles covering technology, AI,
+              software development and digital transformation.
             </p>
 
           </div>
@@ -343,7 +391,7 @@ const BlogHero = () => {
         </div>
 
       </section>
-    
+
     </>
   );
 };

@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 const PortfolioCTA = () => {
   return (
-    <section className="pb-18 sm:pb-20 lg:pb-24 pt-12 sm:pt-12">
+    <section className="hidden md:block pb-18 sm:pb-20 lg:pb-24 pt-12 sm:pt-12">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
         <div

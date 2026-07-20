@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function PortfolioHero() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-16 bg-white">
+    <section className="relative overflow-hidden py-14 lg:py-16 bg-white">
 
      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
   <div
