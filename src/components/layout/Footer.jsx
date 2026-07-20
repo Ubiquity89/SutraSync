@@ -30,11 +30,13 @@ export default function Footer() {
           className="
           py-14
           grid
-          
-  lg:grid-cols-[1.2fr_0.8fr_1.4fr_1fr]
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-[1.2fr_0.8fr_1.4fr_1fr]
           md:grid-cols-2
       
-          gap-10
+          gap-8
+          lg:gap-10
           "
         >
 
@@ -42,7 +44,7 @@ export default function Footer() {
 
           <div className="lg:col-span-1">
 
-            <h2 className="text-3xl font-bold mb-5">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-5">
               SutraSync
             </h2>
 
@@ -121,7 +123,7 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-semibold text-lg mb-5">
+            <h3 className="font-semibold text-base sm:text-lg mb-5">
               Quick Links
             </h3>
 
@@ -143,7 +145,7 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-semibold text-lg mb-4">
+            <h3 className="font-semibold text-base sm:text-lg mb-4">
               Our Locations
             </h3>
 
@@ -195,7 +197,7 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-semibold text-lg mb-5">
+            <h3 className="font-semibold text-base sm:text-lg mb-5">
               Contact Us
             </h3>
 
@@ -245,7 +247,7 @@ export default function Footer() {
           className="
           max-w-[1320px]
           mx-auto
-          px-6
+          px-4 sm:px-6
           py-2
           flex
           flex-col
@@ -254,7 +256,8 @@ export default function Footer() {
           justify-between
           text-sm
           text-white/60
-          "
+          gap-4
+        "
         >
 
           <p>

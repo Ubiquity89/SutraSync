@@ -47,8 +47,8 @@ const ContactForm = () => {
         relative
         overflow-hidden
         bg-white
-        rounded-[32px]
-        p-10
+        rounded-[24px] sm:rounded-[32px]
+        p-6 sm:p-8 lg:p-10
         border
         border-slate-100
         shadow-[0_20px_60px_rgba(15,23,42,0.08)]
@@ -94,7 +94,7 @@ const ContactForm = () => {
 
         <h3
           className="
-            text-[22px]
+            text-[18px] sm:text-[20px] lg:text-[22px]
             leading-tight
             font-semibold
             text-[#1A3552]
@@ -115,7 +115,7 @@ const ContactForm = () => {
           onSubmit={handleSubmit}
           className="space-y-4 mt-8"
         >
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input
               type="text"
               name="name"
@@ -137,7 +137,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input
               type="text"
               name="phone"

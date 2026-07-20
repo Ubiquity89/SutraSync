@@ -1,83 +1,21 @@
-import Button from "../ui/Button";
-import {
-  ArrowRight,
-  Phone,
-  Code,
-  Zap,
-  Globe,
-  Sparkles,
-  Link,
-} from "lucide-react";
-import Container from "../ui/Container";
 import { motion } from "framer-motion";
+import { ArrowRight, Phone } from "lucide-react";
+import Container from "../ui/Container";
+import Button from "../ui/Button";
 
 export default function Hero() {
   return (
-    <section
-     className="
-relative
-overflow-hidden
-bg-gradient-to-r
-from-white
-via-[#F8FAFD]
-to-[#EEF4FF]
-py-10
-"
-    >
-    
+    <section className="relative overflow-hidden bg-white min-h-[92vh] flex items-center">
 
-      {/* Background Elements */}
+      {/* Background */}
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
+        {/* top right blur */}
 
         <motion.div
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-          }}
-          className="
-          absolute
-          top-24
-          right-[10%]
-          w-40
-          h-40
-          bg-[#3A83CC]/20
-          rounded-full
-          blur-3xl
-        "
-        />
-
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.15, 0.3, 0.15],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-          }}
-          className="
-          absolute
-          bottom-20
-          left-[5%]
-          w-52
-          h-52
-          bg-[#234A7D]/15
-          rounded-full
-          blur-3xl
-        "
-        />
-
-        {/* Floating Icons */}
-
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            rotate: [0, 360],
+            scale: [1, 1.15, 1],
           }}
           transition={{
             duration: 8,
@@ -85,18 +23,21 @@ py-10
           }}
           className="
           absolute
-          top-[15%]
-          left-[6%]
-          text-[#3A83CC]/20
-        "
-        >
-          <Code size={38} />
-        </motion.div>
+          -top-40
+          -right-32
+          w-[700px]
+          h-[700px]
+          rounded-full
+          bg-blue-200/40
+          blur-[140px]
+          "
+        />
+
+        {/* bottom left */}
 
         <motion.div
           animate={{
-            y: [0, 20, 0],
-            rotate: [0, -360],
+            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 10,
@@ -104,278 +45,321 @@ py-10
           }}
           className="
           absolute
-          bottom-[20%]
-          right-[10%]
-          text-[#3A83CC]/15
-        "
-        >
-          <Globe size={42} />
-        </motion.div>
+          -bottom-44
+          -left-44
+          w-[550px]
+          h-[550px]
+          rounded-full
+          bg-blue-100
+          blur-[140px]
+          "
+        />
 
-        <motion.div
-          animate={{
-            y: [0, -12, 0],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-          }}
+        {/* center glow */}
+
+        <div
           className="
           absolute
-          top-[50%]
-          left-[10%]
-          text-[#3A83CC]/15
-        "
-        >
-          <Zap size={32} />
-        </motion.div>
+          left-1/2
+          top-1/2
+          -translate-x-1/2
+          -translate-y-1/2
+          w-[900px]
+          h-[900px]
+          rounded-full
+          bg-white
+          opacity-80
+          blur-[100px]
+          "
+        />
 
-        <motion.div
-          animate={{
-            y: [0, 12, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-          }}
+        {/* dotted decoration */}
+
+        <div
           className="
           absolute
-          top-[35%]
-          right-[5%]
-          text-[#3A83CC]/15
-        "
+          right-20
+          top-[42%]
+          grid
+          grid-cols-6
+          gap-3
+          opacity-20
+          "
         >
-          <Sparkles size={30} />
-        </motion.div>
+          {[...Array(36)].map((_, i) => (
+            <div
+              key={i}
+              className="w-1.5 h-1.5 rounded-full bg-blue-500"
+            />
+          ))}
+        </div>
       </div>
 
       <Container>
 
         <div
           className="
-          max-w-[1200px]
+          max-w-6xl
           mx-auto
-          grid
-          lg:grid-cols-[50%_50%]
-          gap-10
+          flex
+          flex-col
           items-center
-        "
+          justify-center
+          text-center
+          py-28
+          relative
+          z-10
+          "
         >
 
-          {/* LEFT */}
+          {/* Heading */}
+
+          <motion.h1
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: .8,
+            }}
+            className="
+            text-[32px]
+            sm:text-[42px]
+            md:text-[48px]
+            lg:text-[62px]
+            font-extrabold
+            leading-[1.10]
+            tracking-[-1px]
+            text-slate-900
+            max-w-6xl 
+            "
+          >
+            Transforming Ideas
+            <br />
+
+            Into{" "}
+            <span className="text-[#2563EB]">
+              Digital Solutions.
+            </span>
+
+          </motion.h1>
+
+          {/* Description */}
+
+          <motion.p
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: .2,
+              duration: .8,
+            }}
+            className="
+            mt-7
+            max-w-3xl
+            text-base
+            sm:text-lg
+            md:text-xl
+            leading-8
+            text-slate-500
+            "
+          >
+            We help startups and enterprises design,
+            develop and scale future-ready software,
+            AI solutions and digital products that
+            accelerate business growth.
+          </motion.p>
+
+          {/* Buttons */}
 
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: .35,
+            }}
+            className="
+            mt-14
+            flex
+            flex-wrap
+            justify-center
+            gap-4
+            sm:gap-5
+            "
           >
 
-            {/* Badge */}
-
-            <div
-              className="
-              inline-flex
-              px-5
-              py-2.5
-              rounded-full
-              bg-[#EAF3FF]
-              text-[#3A83CC]
-              text-sm
-              font-semibold
-              mb-8
-              "
-            >
-              We Build Digital Excellence
-            </div>
-
-            {/* Heading */}
-
-            <motion.h1
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
+           <Button
   className="
-  text-[32px]
-  lg:text-[54px]
-  leading-[1.08]
-  font-bold
-  text-[#1A3552]
-  max-w-[620px]
-"
+    rounded-full
+    px-6 sm:px-8
+    py-5 sm:py-6
+    bg-gradient-to-r
+    from-[#6D4AFF]
+    to-[#2563EB]
+    hover:scale-105
+    transition-all
+    duration-300
+    shadow-[0_10px_40px_rgba(37,99,235,.25)]
+  "
 >
-  Transforming Ideas
-  <br />
-  Into{" "}
-  <span className="text-[#3A83CC]">
-    Digital Solutions
-  </span>
-</motion.h1>
+              <div className="flex items-center gap-2">
 
-            {/* Description */}
+                Explore Services
+
+                <ArrowRight size={18} />
+
+              </div>
+
+            </Button>
+
+            <Button
+  variant="outline"
+  className="
+    rounded-full
+    px-6 sm:px-8
+    py-5 sm:py-6
+    bg-white
+    border
+    border-slate-200
+    hover:bg-slate-50
+  "
+>
+              <div className="flex items-center gap-2">
+
+                <Phone size={18} />
+
+                Book A Free Call
+
+              </div>
+
+            </Button>
+
+          </motion.div>
+                    {/* Trusted Companies */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: .5,
+              duration: .8,
+            }}
+            className="mt-20 w-full"
+          >
 
             <p
               className="
-              mt-6
-              max-w-[520px]
-              text-lg
-              leading-8
               text-slate-500
+              text-base
+              mb-6
+              text-center
               "
             >
-              We help startups and enterprises build scalable,
-              innovative and future-ready digital solutions
-              that drive real business growth.
+              Trusted by innovative companies worldwide
             </p>
 
-            {/* Buttons */}
-
-            <div className="flex flex-wrap gap-4 mt-10">
-
-              <Button>
-                <div className="flex items-center gap-2">
-                  <a href="/services">
-                    Explore Services
-                  </a>
-                  <ArrowRight size={16} />
-                </div>
-              </Button>
-
-              <Button variant="outline">
-                <div className="flex items-center gap-2">
-                  <Phone size={16} />
-                  <a href="/contact">
-                    Book A Free Call
-                  </a>
-                </div>
-              </Button>
-
-            </div>
-
-            {/* Companies */}
-
-            <div className="mt-12">
-
-              <p className="text-sm text-slate-500 mb-5">
-                Trusted by innovative companies worldwide
-              </p>
-
-              <div
-                className="
-                flex
-                flex-wrap
-                items-center
-                gap-8
+            <div
+              className="
+              flex
+              flex-wrap
+              justify-center
+              items-center
+              gap-8
+              sm:gap-14
+              md:gap-20
+              opacity-90
               "
-              >
-                <img
-                  src="/company2.png"
-                  alt=""
-                  className="h-8 object-contain"
-                />
+            >
 
-                <img
-                  src="/company1.png"
-                  alt=""
-                  className="h-8 object-contain"
-                />
+              <img
+                src="/company2.png"
+                alt="Company"
+                className="
+                h-6 sm:h-8
+                w-auto
+                max-w-[100px] sm:max-w-[120px]
+                object-contain
+                grayscale
+                hover:grayscale-0
+                transition
+                duration-300
+                "
+              />
 
-                <img
-                  src="/company3.jpeg"
-                  alt=""
-                  className="h-6 object-contain"
-                />
+              <img
+                src="/company1.png"
+                alt="Company"
+                className="
+                h-6 sm:h-8
+                w-auto
+                max-w-[100px] sm:max-w-[120px]
+                object-contain
+                grayscale
+                hover:grayscale-0
+                transition
+                duration-300
+                "
+              />
 
-                <img
-                  src="/company6.png"
-                  alt=""
-                  className="h-7 object-contain"
-                />
-              </div>
+              <img
+                src="/company3.jpeg"
+                alt="Company"
+                className="
+                h-5 sm:h-7
+                w-auto
+                max-w-[100px] sm:max-w-[120px]
+                object-contain
+                grayscale
+                hover:grayscale-0
+                transition
+                duration-300
+                "
+              />
+
+              <img
+                src="/company6.png"
+                alt="Company"
+                className="
+                h-6 sm:h-8
+                w-auto
+                max-w-[100px] sm:max-w-[120px]
+                object-contain
+                grayscale
+                hover:grayscale-0
+                transition
+                duration-300
+                "
+              />
 
             </div>
 
           </motion.div>
 
-          {/* RIGHT */}
-
-         <motion.div
-  initial={{ opacity: 0, x: 40 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8 }}
-  className="
-    relative
-    flex
-    justify-end
-    items-center
-  "
->
- 
-
-  {/* Dashboard */}
-
-  <img
-    src="/dashboard.png"
-    alt="Dashboard"
-    className="
-    w-[600px]
-    max-w-none
-    h-[480px]
-    relative
-    z-10
-  "
-  />
-
-  {/* Projects */}
-
-  <div
-    className="
-    absolute
-    top-10
-    right-0
-    bg-white
-    rounded-3xl
-    px-6
-    py-4
-    shadow-2xl
-    z-20
-    "
-  >
-    <p className="text-sm text-slate-500">
-      Projects Delivered
-    </p>
-
-    <h3 className="text-5xl font-bold text-[#1A3552]">
-      250+
-    </h3>
-  </div>
-
-  {/* Clients */}
-
-  <div
-    className="
-    absolute
-    bottom-8
-    right-10
-    bg-white
-    rounded-3xl
-    px-6
-    py-4
-    shadow-2xl
-    z-20
-    "
-  >
-    <p className="text-sm text-slate-500">
-      Happy Clients
-    </p>
-
-    <h3 className="text-5xl font-bold text-[#1A3552]">
-      150+
-    </h3>
-  </div>
-</motion.div>
         </div>
 
       </Container>
+
     </section>
   );
 }

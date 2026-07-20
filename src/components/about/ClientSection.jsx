@@ -4,7 +4,7 @@ import clients from "../../data/clients";
 import ClientCard from "./ClientCard";
 const ClientsSection = () => {
   return (
-    <section className="relative py-32 bg-[#fafbfd] overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-32 bg-[#fafbfd] overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute inset-0">
@@ -23,7 +23,7 @@ const ClientsSection = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Heading */}
 
@@ -46,7 +46,7 @@ const ClientsSection = () => {
           <h2
             className="
               mt-6
-              text-5xl
+              text-3xl sm:text-4xl lg:text-5xl
         
               font-bold
               text-[#081C4B]
@@ -75,10 +75,10 @@ const ClientsSection = () => {
 
         {/* Divider */}
 
-        <div className="flex items-center gap-6 mt-24">
+        <div className="flex items-center gap-4 sm:gap-6 mt-16 sm:mt-24">
           <div className="h-px flex-1 bg-slate-200" />
 
-          <div className="w-12 h-12 rounded-full border bg-white flex items-center justify-center">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border bg-white flex items-center justify-center">
             ⭐
           </div>
 
@@ -92,11 +92,11 @@ const ClientsSection = () => {
         <div className="flex justify-center mt-20">
            <button
             className="
-            
+            flex
             lg:flex
-            h-14
+            h-12 sm:h-14
             font-normal
-            px-6
+            px-5 sm:px-6
             rounded-lg
             text-white
             items-center

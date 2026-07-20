@@ -1,7 +1,7 @@
 const PortfolioHero = () => {
   return (
-    <section className="pt-28 pb-16 text-center">
-      <div className="max-w-[900px] mx-auto px-6">
+    <section className="pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 text-center">
+      <div className="max-w-[900px] mx-auto px-4 sm:px-6">
 
         <div
           className="
@@ -26,7 +26,9 @@ const PortfolioHero = () => {
         <h1
           className="
           mt-8
-          text-[70px]
+          text-[42px]
+          sm:text-[56px]
+          lg:text-[70px]
           leading-none
           font-bold
           text-[#031B4E]

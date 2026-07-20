@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ContactMap = () => {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
 
       {/* Glow */}
 
@@ -28,7 +28,7 @@ const ContactMap = () => {
         "
       />
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Header */}
 
@@ -62,8 +62,7 @@ const ContactMap = () => {
           <h2
             className="
               mt-4
-              text-[42px]
-              lg:text-[52px]
+              text-[32px] sm:text-[36px] md:text-[42px] lg:text-[52px]
               font-bold
               text-[#1A3552]
             "
@@ -103,8 +102,8 @@ const ContactMap = () => {
         >
           <iframe
             title="location"
-            src="https://maps.google.com/maps?q=Noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            className="w-full h-[500px]"
+            src="https://www.google.com/maps/place/Sutrasync+Technologies-+It+Solutions+and+Software+Development/@13.1085825,77.5765665,17z/data=!4m10!1m2!2m1!1sSutrasync+Technologies+Bengaluru!3m6!1s0x3bae190c0a4da225:0xebfc2fee9876b882!8m2!3d13.1085439!4d77.5793709!15sCiBTdXRyYXN5bmMgVGVjaG5vbG9naWVzIEJlbmdhbHVydZIBFGluZm9ybWF0aW9uX3NlcnZpY2Vz4AEA!16s%2Fg%2F11mzr35wyw?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+            className="w-full h-[350px] sm:h-[400px] md:h-[500px]"
           />
 
           {/* Floating Office Card */}
@@ -120,16 +119,16 @@ const ContactMap = () => {
             }}
             className="
               absolute
-              left-8
-              bottom-8
+              left-4 sm:left-8
+              bottom-4 sm:bottom-8
               bg-white/95
               backdrop-blur-md
-              rounded-3xl
-              p-6
+              rounded-2xl sm:rounded-3xl
+              p-4 sm:p-6
               shadow-xl
               border
               border-slate-100
-              max-w-[320px]
+              max-w-[280px] sm:max-w-[320px]
             "
           >
             <div className="flex items-start gap-4">
@@ -163,8 +162,7 @@ const ContactMap = () => {
                 </h4>
 
                 <p className="text-sm text-slate-500 mt-1">
-                  Sector 63, Noida,
-                  Uttar Pradesh, India
+                  Scintilla Apartment, 23, 1st Main Rd, 4th Phase, Yelahanka New Town, Bengaluru, India
                 </p>
 
                 <button

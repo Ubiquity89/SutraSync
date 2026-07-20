@@ -62,7 +62,7 @@ const cardAnimation = {
 
 const ContactHero = () => {
   return (
-    <section className="relative bg-[#F8FAFD] py-20 overflow-hidden">
+    <section className="relative bg-[#F8FAFD] py-16 sm:py-20 overflow-hidden">
 
       {/* Glow */}
 
@@ -87,9 +87,9 @@ const ContactHero = () => {
         "
       />
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
           {/* LEFT */}
 
@@ -114,8 +114,7 @@ const ContactHero = () => {
             <h1
               className="
                 mt-4
-                text-[52px]
-                lg:text-[60px]
+                text-[36px] sm:text-[42px] md:text-[52px] lg:text-[60px]
                 leading-[1.05]
                 font-bold
                 text-[#1A3552]

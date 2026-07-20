@@ -33,8 +33,8 @@ const BlogHero = () => {
           />
         </div>
 
-        <div className="max-w-[1200px] mx-auto px-6 pt-20 pb-52 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-32 sm:pb-40 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
 
             {/* LEFT */}
             <div>
@@ -60,8 +60,7 @@ const BlogHero = () => {
 
               <h1
                 className="
-                  text-[58px]
-                  lg:text-[74px]
+                  text-[42px] sm:text-[52px] lg:text-[58px] md:text-[64px]
                   font-bold
                   leading-[0.95]
                   text-white
@@ -76,11 +75,11 @@ const BlogHero = () => {
 
               <p
                 className="
-                  mt-8
-                  text-white/80
-                  text-lg
-                  leading-relaxed
-                  max-w-xl
+                mt-6 sm:mt-8
+                text-white/80
+                text-base sm:text-lg
+                leading-relaxed
+                max-w-xl
                 "
               >
                 Stay updated with the latest trends, expert insights,
@@ -88,12 +87,12 @@ const BlogHero = () => {
                 design, AI and digital transformation.
               </p>
 
-              <div className="flex gap-4 mt-10">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 sm:mt-10">
 
                 <button
                   className="
                     h-12
-                    px-8
+                    px-6 sm:px-8
                     rounded-xl
                     bg-gradient-to-r
                     from-[#2D4F7D]
@@ -114,7 +113,7 @@ const BlogHero = () => {
                 <button
                   className="
                     h-12
-                    px-8
+                    px-6 sm:px-8
                     rounded-xl
                     bg-white
                     text-[#031B4E]
@@ -213,7 +212,7 @@ const BlogHero = () => {
                 shadow-[0_30px_80px_rgba(15,23,42,0.12)]
               "
             >
-              <div className="grid md:grid-cols-3 ">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
                 {/* CARD 1 */}
                 <div className="py-8 text-center">
@@ -315,7 +314,7 @@ const BlogHero = () => {
  {/* NEXT SECTION */}
       <section className="bg-white pt-40 pb-24">
 
-        <div className="max-w-[1100px] mx-auto px-6">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
 
           <div className="text-center mb-16">
 
@@ -323,7 +322,7 @@ const BlogHero = () => {
               Latest Articles
             </p>
 
-            <h2 className="mt-4 text-5xl font-bold text-[#031B4E]">
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#031B4E]">
               Explore Our Insights
             </h2>
 

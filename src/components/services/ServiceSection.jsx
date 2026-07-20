@@ -13,7 +13,7 @@ export default function ServiceSection({
   return (
     <section
       className={`
-        py-24
+        py-16 sm:py-20 lg:py-24
         overflow-hidden
         ${
           reverse
@@ -23,13 +23,14 @@ export default function ServiceSection({
       `}
     >
       <Container>
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
           <div
             className={`
               grid
+              grid-cols-1
               lg:grid-cols-2
-              gap-20
+              gap-12 lg:gap-20
               items-center
 
               ${
@@ -58,7 +59,7 @@ export default function ServiceSection({
               className="relative"
             >
 
-             <div className=" flex items-center justify-center min-h-[550px]">
+             <div className=" flex items-center justify-center min-h-[400px] sm:min-h-[550px]">
                {/* BIG BLOB */}
  <div
                 className="
@@ -76,22 +77,7 @@ export default function ServiceSection({
                 "
                 />
 
-              {/* SECONDARY BLOB */}
-
-              <div
-                className={`
-                  absolute
-                  -z-5
-                  w-[200px]
-                  h-[200px]
-                  rounded-full
-                  bg-[#DCEBFF]
-                  blur-xl
-                  bottom-0
-                  left-0
-                  ${service.blobClass}
-                `}
-              />
+             
 
               {/* DOT PATTERN */}
 
@@ -163,7 +149,7 @@ export default function ServiceSection({
               <h2
                 className="
                   mt-4
-                  text-[42px]
+                  text-[32px] sm:text-[36px] md:text-[42px]
                   leading-tight
                   font-bold
                   text-[#1A3552]

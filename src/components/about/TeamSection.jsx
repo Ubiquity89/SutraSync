@@ -5,7 +5,8 @@ export default function TeamSection() {
   return (
     <section
       className="
-      pt-28 pb-12
+      pt-20 sm:pt-24 lg:pt-28
+      pb-8 sm:pb-12
       bg-white
       relative
       overflow-hidden
@@ -28,7 +29,7 @@ export default function TeamSection() {
         "
       />
 
-      <div className="max-w-[1280px] mx-auto px-6 relative">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 relative">
 
         {/* Header */}
 
@@ -49,7 +50,8 @@ export default function TeamSection() {
           <h2
             className="
             mt-4
-            text-[42px]
+            text-[32px]
+            sm:text-[42px]
             lg:text-[52px]
             font-bold
             text-[#1A3552]
@@ -79,10 +81,11 @@ export default function TeamSection() {
         <div
           className="
           grid
+          grid-cols-1
           sm:grid-cols-2
           lg:grid-cols-3
           xl:grid-cols-5
-          gap-10
+          gap-6 sm:gap-8 lg:gap-10
           "
         >
           {team.map((member, index) => (

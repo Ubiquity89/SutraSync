@@ -87,7 +87,9 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="
-            text-[42px]
+            text-[32px]
+            sm:text-[36px]
+            md:text-[42px]
             lg:text-[48px]
             font-bold
             text-[#1A3552]
@@ -122,6 +124,7 @@ export default function Projects() {
         <div
           className="
           grid
+          grid-cols-1
           sm:grid-cols-2
           lg:grid-cols-3
           xl:grid-cols-4

@@ -8,16 +8,17 @@ export default function AboutHero() {
       relative
       overflow-hidden
       bg-white
-      py-24
+      py-16 sm:py-20 lg:py-24
       "
     >
-      <div className="max-w-[1220px] mx-auto px-6">
+      <div className="max-w-[1220px] mx-auto px-4 sm:px-6">
 
         <div
           className="
           grid
+          grid-cols-1
           lg:grid-cols-2
-          gap-20
+          gap-12 lg:gap-20
           items-center
           "
         >
@@ -48,7 +49,8 @@ export default function AboutHero() {
 
             <h1
               className="
-              text-[42px]
+              text-[32px]
+              sm:text-[42px]
               lg:text-[58px]
               leading-[1.1]
               font-bold
@@ -67,7 +69,8 @@ export default function AboutHero() {
               className="
               mt-8
               text-[#64748B]
-              leading-8
+              text-sm sm:text-base
+              leading-7 sm:leading-8
               max-w-[620px]
               "
             >
@@ -194,8 +197,8 @@ export default function AboutHero() {
     relative
     z-10
     w-full
-    max-w-[700px]
-    rounded-[32px]
+    max-w-[500px] sm:max-w-[600px] lg:max-w-[700px]
+    rounded-[24px] sm:rounded-[32px]
     shadow-[0_30px_80px_rgba(0,0,0,0.12)]
     object-cover
     "
@@ -240,15 +243,15 @@ export default function AboutHero() {
     }}
     className="
     absolute
-    bottom-[-25px]
-    right-6
+    bottom-[-20px] sm:bottom-[-25px]
+    right-4 sm:right-6
     bg-gradient-to-r
     from-[#234A7D]
     to-[#3A83CC]
     text-white
-    rounded-[24px]
-    px-8
-    py-6
+    rounded-[20px] sm:rounded-[24px]
+    px-6 sm:px-8
+    py-5 sm:py-6
     shadow-[0_20px_50px_rgba(35,74,125,0.35)]
     z-20
     "
@@ -258,7 +261,7 @@ export default function AboutHero() {
       <Headphones size={34} />
 
       <div>
-        <h3 className="text-3xl font-bold">
+        <h3 className="text-2xl sm:text-3xl font-bold">
           24/7
         </h3>
 

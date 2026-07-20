@@ -27,22 +27,22 @@ const navLinkClass = ({ isActive }) =>
   shadow-sm
 "
 >
-      <div className="max-w-[1200px] mx-auto px-6 font-semibold underline-offset-4">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 font-semibold underline-offset-4">
 
-        <div className="h-20 flex items-center justify-between">
+        <div className="h-16 sm:h-20 flex items-center justify-between">
 
           {/* Logo */}
 <Link to="/">
           <img
             src="/image.png"
             alt="logo"
-            className="h-12"
+            className="h-10 sm:h-12"
           /></Link>
 
           {/* Desktop Menu */}
 
         <nav className="hidden lg:block">
-  <ul className="flex items-center gap-10">
+  <ul className="flex items-center gap-6 xl:gap-10">
 
     <li>
       <NavLink to="/" className={navLinkClass}>
@@ -105,9 +105,10 @@ const navLinkClass = ({ isActive }) =>
             hidden
             lg:flex
             h-11
-            px-6
+            px-5 xl:px-6
             rounded-lg
             text-white
+            text-sm xl:text-base
             items-center
             gap-2
             bg-gradient-to-r
@@ -151,37 +152,86 @@ const navLinkClass = ({ isActive }) =>
         top-0
         right-0
         h-screen
-        w-72
+        w-[280px]
+        sm:w-72
         bg-white
         shadow-2xl
         z-50
         lg:hidden
       "
     >
-      <div className="flex flex-col p-6 gap-4">
-        <NavLink to="/" onClick={() => setIsOpen(false)}>
+      <div className="flex flex-col p-5 sm:p-6 gap-4">
+        <NavLink 
+          to="/" 
+          onClick={() => setIsOpen(false)}
+          className="text-base sm:text-lg py-2 border-b border-slate-100"
+        >
           Home
         </NavLink>
 
-        <NavLink to="/services" onClick={() => setIsOpen(false)}>
+        <NavLink 
+          to="/services" 
+          onClick={() => setIsOpen(false)}
+          className="text-base sm:text-lg py-2 border-b border-slate-100"
+        >
           Services
         </NavLink>
 
-        <NavLink to="/about" onClick={() => setIsOpen(false)}>
+        <NavLink 
+          to="/about" 
+          onClick={() => setIsOpen(false)}
+          className="text-base sm:text-lg py-2 border-b border-slate-100"
+        >
           About
         </NavLink>
 
-        <NavLink to="/portfolio" onClick={() => setIsOpen(false)}>
+        <NavLink 
+          to="/portfolio" 
+          onClick={() => setIsOpen(false)}
+          className="text-base sm:text-lg py-2 border-b border-slate-100"
+        >
           Portfolio
         </NavLink>
 
-        <NavLink to="/blog" onClick={() => setIsOpen(false)}>
+        <NavLink 
+          to="/blog" 
+          onClick={() => setIsOpen(false)}
+          className="text-base sm:text-lg py-2 border-b border-slate-100"
+        >
           Blog
         </NavLink>
 
-        <NavLink to="/lead" onClick={() => setIsOpen(false)}>
+        <NavLink 
+          to="/lead" 
+          onClick={() => setIsOpen(false)}
+          className="text-base sm:text-lg py-2 border-b border-slate-100"
+        >
           Lead Generation
         </NavLink>
+
+        {/* Mobile CTA Button */}
+        <Link
+          to="/contact"
+          onClick={() => setIsOpen(false)}
+          className="
+          mt-4
+          h-12
+          px-6
+          rounded-lg
+          text-white
+          font-semibold
+          flex
+          items-center
+          justify-center
+          gap-2
+          bg-gradient-to-r
+          from-[#234A7D]
+          to-[#3A83CC]
+        "
+        >
+          Book a demo
+          <ArrowRight size={16} />
+        </Link>
       </div>
     </div>
   </>

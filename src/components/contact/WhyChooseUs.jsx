@@ -32,7 +32,7 @@ const items = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative py-24 bg-[#F8FAFD] overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-[#F8FAFD] overflow-hidden">
 
       {/* Glow */}
 
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
         "
       />
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Header */}
 
@@ -91,8 +91,7 @@ const WhyChooseUs = () => {
           <h2
             className="
               mt-4
-              text-[42px]
-              lg:text-[52px]
+              text-[32px] sm:text-[36px] md:text-[42px] lg:text-[52px]
               font-bold
               text-[#1A3552]
             "
@@ -116,7 +115,7 @@ const WhyChooseUs = () => {
 
         {/* Cards */}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {items.map((item, index) => {
             const Icon = item.icon;

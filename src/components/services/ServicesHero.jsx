@@ -11,16 +11,17 @@ export default function ServicesHero() {
       from-white
       via-[#F9FBFF]
       to-[#EEF4FF]
-      py-24
+      py-16 sm:py-20 lg:py-24
     "
     >
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
         <div
           className="
           grid
+          grid-cols-1
           lg:grid-cols-2
-          gap-16
+          gap-12 lg:gap-16
           items-center
         "
         >
@@ -57,7 +58,8 @@ export default function ServicesHero() {
 
             <h1
               className="
-              text-[48px]
+              text-[36px]
+              sm:text-[48px]
               lg:text-[68px]
               font-bold
               text-[#1A3552]
@@ -87,7 +89,7 @@ export default function ServicesHero() {
 
             {/* Buttons */}
 
-            <div className="flex flex-wrap gap-4 mt-10">
+            <div className="flex flex-wrap gap-3 sm:gap-4 mt-8 sm:mt-10">
 
               <button
                 className="

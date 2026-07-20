@@ -231,7 +231,9 @@ export default function Services() {
             transition={{ delay: 0.3 }}
             className="
             mt-4
-            text-[48px]
+            text-[36px]
+            sm:text-[42px]
+            md:text-[48px]
             lg:text-[52px]
             font-bold
             text-[#1A3552]
@@ -264,6 +266,8 @@ export default function Services() {
         <div
           className="
           grid
+          grid-cols-1
+          sm:grid-cols-2
           md:grid-cols-2
           lg:grid-cols-3
           gap-6

@@ -6,8 +6,8 @@ export default function Button({
     return (
       <button
         className="
-        h-12
-        px-7
+        h-11 sm:h-12
+        px-5 sm:px-7
         rounded-lg
         border
         border-slate-200
@@ -37,8 +37,8 @@ export default function Button({
   return (
     <button
       className="
-      h-12
-      px-7
+      h-11 sm:h-12
+      px-5 sm:px-7
       rounded-lg
       text-white
       font-medium

@@ -10,7 +10,7 @@ const BlogCard = ({ post }) => {
       transition={{ duration: 0.25 }}
       className="
         bg-white
-        rounded-[24px]
+        rounded-[20px] sm:rounded-[24px]
         overflow-hidden
         border
         border-slate-100
@@ -25,7 +25,7 @@ const BlogCard = ({ post }) => {
           alt={post.title}
           className="
             w-full
-            h-[220px]
+            h-[180px] sm:h-[200px] md:h-[220px]
             object-cover
             transition
             duration-700
@@ -69,7 +69,7 @@ const BlogCard = ({ post }) => {
 
       {/* Content */}
 
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <div className="flex gap-4 text-slate-400 text-sm">
           <span className="flex items-center gap-1">
             <Calendar size={14} />
@@ -85,7 +85,7 @@ const BlogCard = ({ post }) => {
         <h3
           className="
             mt-4
-            text-[22px]
+            text-[18px] sm:text-[20px] md:text-[22px]
             font-bold
             text-[#031B4E]
             leading-snug
