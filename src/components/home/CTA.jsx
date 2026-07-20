@@ -1,6 +1,6 @@
 import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 export default function CTA() {
   return (
     <section className="relative pt-20 pb-28 bg-gradient-to-b from-[#F8FAFD] via-white to-[#F0F7FF] overflow-hidden">
@@ -194,9 +194,10 @@ export default function CTA() {
               shadow-xl
             "
             >
-              <a href="/contact">
+              <Link to="/contact">
                 Get In Touch
-              </a>
+              </Link>
+              
 
               <motion.span
                 whileHover={{ x: 4 }}

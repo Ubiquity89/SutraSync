@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 import CountUp from "../ui/CountAnimation";
 import GlobeGraphic from "./GlobeGraphic";
 import BlogGrid from "./BlogGrid";
+import { Link } from "react-router-dom";
+
 const BlogHero = () => {
+  
   return (
     <>
       {/* HERO */}
@@ -106,8 +109,10 @@ const BlogHero = () => {
                     transition-all
                   "
                 >
-                  Explore Articles
-                  <ArrowRight size={18} />
+                  <Link to="/blog">
+                    Explore Articles
+                  </Link>
+                    <ArrowRight size={18} />
                 </button>
 
                 <button

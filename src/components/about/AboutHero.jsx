@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Play, Headphones } from "lucide-react";
-
+import { Link } from "react-router-dom";
 export default function AboutHero() {
   return (
     <section
@@ -113,9 +113,9 @@ export default function AboutHero() {
                   className="text-white ml-1"
                 />
               </div>
-              <a href="https://www.youtube.com/@sutrasyncindia">
+              <Link to="https://www.youtube.com/@sutrasyncindia">
                 Watch Our Introduction
-              </a>
+              </Link>
             </button>
 
           </motion.div>

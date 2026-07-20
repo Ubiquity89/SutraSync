@@ -1,4 +1,4 @@
-import TopBar from "../components/layout/TopBar";
+// import TopBar from "../components/layout/TopBar";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
@@ -10,7 +10,7 @@ import ContactCTA from "../components/contact/ContactCTA";
 const Contact = () => {
   return (
     <>
-      <TopBar />
+      {/* <TopBar /> */}
       <Navbar />
 
       <ContactHero />

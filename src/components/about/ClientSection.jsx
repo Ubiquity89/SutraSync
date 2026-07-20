@@ -2,7 +2,10 @@ import ClientStats from "./ClientStats";
 import ClientShowcase from "./ClientShowcase";
 import clients from "../../data/clients";
 import ClientCard from "./ClientCard";
+import {Link} from "react-router-dom"
+
 const ClientsSection = () => {
+
   return (
     <section className="relative py-16 sm:py-20 lg:py-32 bg-[#fafbfd] overflow-hidden">
 
@@ -106,9 +109,13 @@ const ClientsSection = () => {
             to-[#3A83CC]
           "
           >
-            <a href="/contact">
+            <Link 
+              to="/contact"
+              className="text-white"
+            >
               Let's Work Together
-            </a>
+            </Link>
+            
           </button>
         </div>
 

@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const PortfolioCTA = () => {
   return (
     <section className="mt-20 pb-20">
@@ -49,7 +49,9 @@ const PortfolioCTA = () => {
         
         "
         >
-          Start Your Project
+          <Link to="/contact">
+            Start Your Project
+          </Link>
           <ArrowRight size={18} />
         </button>
       </div>

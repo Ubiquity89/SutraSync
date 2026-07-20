@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -218,8 +219,9 @@ export default function Hero() {
   "
 >
               <div className="flex items-center gap-2">
-
+                <Link to="/services">
                 Explore Services
+                </Link>
 
                 <ArrowRight size={18} />
 
@@ -240,10 +242,12 @@ export default function Hero() {
   "
 >
               <div className="flex items-center gap-2">
+              
 
                 <Phone size={18} />
-
+                <Link to="/contact">
                 Book A Free Call
+                </Link>
 
               </div>
 

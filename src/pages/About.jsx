@@ -1,4 +1,4 @@
-import TopBar from "../components/layout/TopBar";
+// import TopBar from "../components/layout/TopBar";
 import Navbar from "../components/layout/Navbar";
 import AboutHero from "../components/about/AboutHero";
 import Footer from "../components/layout/Footer";
@@ -9,7 +9,7 @@ import ClientSection from "../components/about/ClientSection";
 export default function About() {
   return (
     <>
-      <TopBar />
+      {/* <TopBar /> */}
       <Navbar />
       <AboutHero />
       <TeamSection />

@@ -242,8 +242,10 @@ export default function Projects() {
                   text-sm
                 "
                 >
-                  View Case Study
-                  <ArrowRight size={16} />
+                  <Link to="/portfolio">
+                    View Case Study
+                  </Link>
+                    <ArrowRight size={16} />
                 </motion.button>
 
               </div>

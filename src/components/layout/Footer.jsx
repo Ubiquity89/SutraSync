@@ -63,8 +63,8 @@ export default function Footer() {
 
             <div className="flex gap-3 mt-6">
 
-              <a
-                href="https://www.facebook.com/people/Sutrasync-Technologies-Private-Limited/61586615313208/?rdid=okg8vDGH6wkbNzzb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GLCUxZKbX%2F"
+              <Link
+                to="https://www.facebook.com/people/Sutrasync-Technologies-Private-Limited/61586615313208/?rdid=okg8vDGH6wkbNzzb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GLCUxZKbX%2F"
                 className="
                 w-10
                 h-10
@@ -78,10 +78,10 @@ export default function Footer() {
               "
               >
                 <FaFacebookF />
-              </a>
+              </Link>
 
-              <a
-                href="https://in.linkedin.com/company/sutra-sync-technologies"
+              <Link
+                to="https://in.linkedin.com/company/sutra-sync-technologies"
                 className="
                 w-10
                 h-10
@@ -95,10 +95,10 @@ export default function Footer() {
               "
               >
                 <FaLinkedinIn />
-              </a>
+              </Link>
 
-              <a
-                href="https://www.instagram.com/sutrasync_techonologies/"
+              <Link
+                to="https://www.instagram.com/sutrasync_techonologies/"
                 className="
                 w-10
                 h-10
@@ -112,7 +112,7 @@ export default function Footer() {
               "
               >
                 <FaInstagram />
-              </a>
+              </Link>
 
             
 
