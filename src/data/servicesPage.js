@@ -1,5 +1,6 @@
 export const servicesPage = [
   {
+    id:"web-development",
     number: "01",
     title: "Web Development",
     description:
@@ -20,6 +21,7 @@ export const servicesPage = [
   },
 
   {
+    id:"mobile-app-development",
     number: "02",
     title: "Mobile App Development",
     description:
@@ -41,6 +43,7 @@ export const servicesPage = [
   },
 
   {
+    id:"ai-solutions",
     number: "03",
     title: "AI Solutions",
     description:
@@ -62,6 +65,7 @@ export const servicesPage = [
   },
 
   {
+    id:"ui-ux-design",
     number: "04",
     title: "UI/UX Design",
     description:
@@ -83,6 +87,7 @@ export const servicesPage = [
   },
 
   {
+    id:"cloud-solutions",
     number: "05",
     title: "Cloud Solutions",
     description:
@@ -102,6 +107,7 @@ export const servicesPage = [
   },
 
   {
+    id:"digital-consulting",
     number: "06",
     title: "Digital Consulting",
     description:

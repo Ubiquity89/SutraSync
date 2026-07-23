@@ -13,6 +13,7 @@ export default function ServiceSection({
 }) {
   return (
     <section
+    id={service.id}
       className={`
         py-16 sm:py-20 lg:py-24
         overflow-hidden

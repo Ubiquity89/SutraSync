@@ -1,7 +1,8 @@
 import { ArrowRight, Menu, X, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import MegaMenu from "../navbar/MegaMenu";
+import { ChevronDown } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -68,12 +69,44 @@ export default function Navbar() {
                 </NavLink>
               </li>
 
-              <li>
-                <NavLink to="/services" className={navLinkClass}>
-                  Services
-                </NavLink>
-              </li>
+             <li className="relative group">
 
+  <button
+  className="
+    flex
+    items-center
+    gap-1
+    text-[#1A3552]
+    hover:text-[#3A83CC]
+    transition
+  "
+>
+  Services
+
+  <ChevronDown
+    size={16}
+    className="
+      transition-transform
+      duration-300
+      group-hover:rotate-180
+    "
+  />
+</button>
+
+  <div
+    className="
+      invisible
+      opacity-0
+      group-hover:visible
+      group-hover:opacity-100
+      transition-all
+      duration-300
+    "
+  >
+    <MegaMenu />
+  </div>
+
+</li>
               <li>
                 <NavLink to="/about" className={navLinkClass}>
                   About
@@ -82,7 +115,7 @@ export default function Navbar() {
 
               <li>
                 <NavLink to="/portfolio" className={navLinkClass}>
-                  Portfolio
+                  Our Projects
                 </NavLink>
               </li>
 
@@ -234,7 +267,7 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={mobileLinkClass}
                   >
-                    Portfolio
+                    Our Projects
                   </NavLink>
 
                   <NavLink
