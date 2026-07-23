@@ -75,7 +75,7 @@ export default function AboutHero() {
               "
             >
               Whether you have a few computers or offices
-              throughout the country, we provide expert
+              throughout country, we provide expert
               assistance when equipment fails, networks crash,
               or you simply need a helping hand.
             </p>
