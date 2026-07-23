@@ -1,11 +1,6 @@
-import {
-  CheckCircle2,
-  ArrowRight,
-} from "lucide-react";
-
+import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
-import { Link } from "react-router-dom";
 
 export default function ServiceSection({
   service,
@@ -13,9 +8,9 @@ export default function ServiceSection({
 }) {
   return (
     <section
-    id={service.id}
+      id={service.id}
       className={`
-        py-16 sm:py-20 lg:py-24
+        py-20 lg:py-28
         overflow-hidden
         ${
           reverse
@@ -25,30 +20,17 @@ export default function ServiceSection({
       `}
     >
       <Container>
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-          <div
-            className={`
-              grid
-              grid-cols-1
-              lg:grid-cols-2
-              gap-12 lg:gap-20
-              items-center
+        <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
 
-              ${
-                reverse
-                  ? "lg:[&>*:first-child]:order-2"
-                  : ""
-              }
-            `}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
-            {/* IMAGE SIDE */}
+            {/* IMAGE */}
 
             <motion.div
               initial={{
                 opacity: 0,
-                x: reverse ? 100 : -100,
+                x: reverse ? 80 : -80,
               }}
               whileInView={{
                 opacity: 1,
@@ -58,68 +40,87 @@ export default function ServiceSection({
               transition={{
                 duration: 0.8,
               }}
-              className="relative hidden md:block"
+              className={`
+                relative
+                hidden
+                md:flex
+                items-center
+                justify-center
+
+                
+
+                ${
+                  reverse
+                    ? "lg:col-span-5 lg:col-start-8 lg:row-start-1"
+                    : "lg:col-span-5"
+                }
+              `}
             >
 
-             <div className=" flex items-center justify-center min-h-[400px] sm:min-h-[550px]">
-               {/* BIG BLOB */}
- <div
-                className="
+              {/* Blob */}
 
-                absolute
-                z-0
-                w-[420px]
-                h-[420px]
-                rounded-full
-                bg-[#EAF3FF]
-                opacity-80
-                top-1/2
-                left-1/2
-                -translate-x-1/2
-                -translate-y-1/2
-                "
-                />
+              <div
+                className={`
+                  absolute
+                  rounded-full
+                  bg-[#EAF3FF]
+                  opacity-80
+                  -translate-x-1/2
+                  -translate-y-1/2
+                  ${service.blobClass}
+                `}
+              />
 
              
 
-              {/* DOT PATTERN */}
+              {/* Dots */}
 
               <div
                 className="
                   absolute
-                  -right-8
+                  right-0
                   top-10
                   w-28
                   h-28
-                  opacity-50
+                  opacity-40
                   bg-[radial-gradient(circle,#3A83CC_1px,transparent_1px)]
                   bg-[size:12px_12px]
                 "
               />
 
-             
-              {/* IMAGE */}
+            
+
+              {/* Image */}
 
               <motion.img
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 whileHover={{
                   scale: 1.03,
                 }}
-                transition={{
-                  duration: 0.4,
-                }}
                 src={service.image}
                 alt={service.title}
-                className=
-                  
-                  {`
-  relative
-  z-10
-  max-w-none
-  object-contain
-  ${service.imageClass}
-`}
+                className={`
+                  relative
+                  z-10
+
+                  object-contain
+
+                  w-full
+                  h-[900px]
+
+                  ${service.imageClass}
+
+                  drop-shadow-[0_30px_60px_rgba(58,131,204,.22)]
+                `}
               />
-             </div>
+
             </motion.div>
 
             {/* CONTENT */}
@@ -138,128 +139,203 @@ export default function ServiceSection({
                 duration: 0.8,
                 delay: 0.2,
               }}
+              className={`
+                ${
+                  reverse
+                    ? "lg:col-span-7 lg:col-start-1 lg:row-start-1"
+                    : "lg:col-span-7"
+                }
+              `}
             >
-              <p
-                className="
-                  text-[#3A83CC]
-                  text-5xl
-                  font-bold
-                "
-              >
-                {service.number}
-              </p>
+                            {/* Number */}
+
+              <div className="flex items-center mb-6">
+
+                <span
+                  className="
+                    text-5xl
+                    lg:text-6xl
+                    font-bold
+                    text-[#3A83CC]
+                  "
+                >
+                  {service.number}
+                </span>
+
+              </div>
+
+              {/* Title */}
 
               <h2
                 className="
-                  mt-4
-                  text-[32px] sm:text-[36px] md:text-[42px]
-                  leading-tight
+                  text-[34px]
+                  sm:text-[40px]
+                  lg:text-[46px]
                   font-bold
+                  leading-tight
                   text-[#1A3552]
                 "
               >
                 {service.title}
               </h2>
 
+              {/* Description */}
+
               <p
                 className="
                   mt-6
-                  text-slate-500
+                  text-lg
                   leading-8
-                  max-w-[520px]
+                  text-slate-500
+                  max-w-[650px]
                 "
               >
                 {service.description}
               </p>
 
-              {/* FEATURES */}
+              {/* Features */}
 
-              <div className="mt-8 space-y-4">
+              <div
+                className="
+                  mt-10
+                  grid
+                  grid-cols-1
+                  md:grid-cols-2
+                  gap-y-5
+                  gap-x-6
+                "
+              >
 
-                {service.features.map(
-                  (item, index) => (
-                    <motion.div
-                      key={item}
-                      initial={{
-                        opacity: 0,
-                        x: 20,
-                      }}
-                      whileInView={{
-                        opacity: 1,
-                        x: 0,
-                      }}
-                      viewport={{
-                        once: true,
-                      }}
-                      transition={{
-                        delay:
-                          index * 0.08,
-                      }}
+                {service.features.map((feature, index) => (
+
+                  <motion.div
+                    key={feature}
+                    initial={{
+                      opacity: 0,
+                      x: 20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      delay: index * 0.08,
+                    }}
+                    className="
+                      flex
+                      items-center
+                      gap-3
+                      min-w-0
+                    "
+                  >
+
+                    <CheckCircle2
+                      size={20}
                       className="
-                        flex
-                        items-center
-                        gap-3
+                        text-[#3A83CC]
+                        shrink-0
+                      "
+                    />
+
+                    <span
+                      className="
+                        text-[16px]
+                        font-medium
+                        text-slate-700
+                        whitespace-nowrap
                       "
                     >
-                      <CheckCircle2
-                        size={18}
-                        className="
-                          text-[#3A83CC]
-                          shrink-0
-                        "
-                      />
+                      {feature}
+                    </span>
 
-                      <span className="text-slate-600">
-                        {item}
-                      </span>
-                    </motion.div>
-                  )
-                )}
+                  </motion.div>
+
+                ))}
 
               </div>
 
-              {/* BUTTON */}
+              {/* Technologies */}
 
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                }}
-                whileTap={{
-                  scale: 0.95,
-                }}
-                className="
-                  mt-10
-                  h-12
-                  px-8
-                  rounded-xl
-                  text-white
-                  font-medium
+              <div className="mt-12">
 
-                  bg-gradient-to-r
-                  from-[#234A7D]
-                  to-[#3A83CC]
+                <h4
+                  className="
+                    mb-5
+                    text-sm
+                    uppercase
+                    tracking-[2px]
+                    font-semibold
+                    text-slate-400
+                  "
+                >
+                  Technologies We Use
+                </h4>
 
-                  flex
-                  items-center
-                  gap-2
+                <div
+                  className="
+                    flex
+                    flex-wrap
+                    gap-3
+                  "
+                >
 
-                  shadow-lg
-                "
-              >
-                <Link to="/contact">
-                  Learn More
-                </Link>
+                  {service.technologies.map((tech) => (
 
-                <ArrowRight
-                  size={18}
-                />
+                    <motion.span
+                      key={tech}
+                      whileHover={{
+                        y: -2,
+                      }}
+                      className="
+                        px-4
+                        py-2
 
-              </motion.button>
+                        rounded-full
+
+                        bg-[#F4F8FC]
+
+                        border
+
+                        border-[#E3EDF9]
+
+                        text-[#1A3552]
+
+                        text-sm
+
+                        font-medium
+
+                        transition-all
+
+                        duration-300
+
+                        hover:bg-[#3A83CC]
+
+                        hover:text-white
+
+                        hover:border-[#3A83CC]
+                      "
+                    >
+                      {tech}
+                    </motion.span>
+
+                  ))}
+
+                </div>
+
+              </div>
+
             </motion.div>
 
           </div>
+
         </div>
+
       </Container>
+
     </section>
+
   );
 }

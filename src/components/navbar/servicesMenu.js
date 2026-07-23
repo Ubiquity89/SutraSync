@@ -2,8 +2,8 @@ import {
   Monitor,
   Smartphone,
   PenTool,
-  Cloud,
   Brain,
+  ShoppingCart,
   Briefcase,
 } from "lucide-react";
 
@@ -45,10 +45,10 @@ export const servicesMenu = [
       },
 
       {
-        title: "Cloud Solutions",
-        desc: "AWS & Azure",
-        icon: Cloud,
-        link: "/services#cloud-solutions",
+        title: "E-Commerce Solutions",
+        desc: "Shopify & WooCommerce",
+        icon: ShoppingCart,
+        link: "/services#e-commerce-solutions",
       },
 
       {

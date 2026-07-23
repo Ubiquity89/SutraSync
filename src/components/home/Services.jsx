@@ -34,18 +34,18 @@ const services = [
     image: "/ui.png",
   },
   {
-    id: "cloud-solutions",
-    title: "Cloud Solutions",
+id: "e-commerce-solutions",
+title: "E-Commerce Solutions",
     description:
       "Scalable, secure and reliable cloud infrastructure.",
-    image: "/.png",
+    image: "/ecommerce.png",
   },
   {
     id: "digital-consulting",
     title: "Digital Consulting",
     description:
       "Strategic consulting to help your business grow and scale.",
-    image: "/.png",
+    image: "/digital.png",
   },
 ];
 
